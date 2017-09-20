@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Дарья Крамарева](https://up.htmlacademy.ru/adaptive/12/user/312749).
-* Наставник: `Неизвестно`.
+* Наставник: [Александр Оксанич](https://htmlacademy.ru/profile/oksanych).
 
 ---
 
