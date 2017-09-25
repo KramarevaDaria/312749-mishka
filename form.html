@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Мишка</title>
+  </head>
+  <body>
+    <header class="page-header">
+      <div class="page-header_wrapper">
+        <a class="page-header__logo" href="index.html">
+          <img src="http://placehold.it/86x35" alt="Логотип компании">
+        </a>
+      </div>
+      <nav class="site-navigation">
+        <button class="site-navigation__toggle" type="button">Открыть меню</button>
+        <ul class="site-list site-navigation__list">
+          <li class="site-list__item">
+            <a href="catalog.html">Каталог товаров</a>
+          </li>
+          <li class="site-list__item">
+            <a href="form.html">Вязание на заказ</a>
+          </li>
+          <li class="site-list__item">
+            <a href="#">Поиск по сайту</a>
+          </li>
+          <li class="site-list__item">
+            <a href="#">Корзина: пока пуста</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="page-main">
+      <section class="filters">
+        <h1 class="filters__title">Вязание на заказ</h1>
+        <p class="filters__text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
+        <form class="filters__form filter" action="https://echo.htmlacademy.ru" method="get">
+          <fieldset class="filter__fieldset">
+            <legend class="filter__legend">Тип</legend>
+            <label class="filter__label">
+              <input class="filter__input filter__input--radio" type="radio" name="type" value="accessory" checked>
+              Аксессуар для интерьера
+            </label>
+            <label class="filter__label">
+              <input class="filter__input filter__input--radio" type="radio" name="type" value="toy">
+              Детская игрушка
+            </label>
+          </fieldset>
+          <fieldset class="filter__fieldset">
+            <legend class="filter__legend">Цвет</legend>
+            <label class="filter__label">
+              <input class="filter__input filter__input--checkbox" type="checkbox" name="white" checked>
+              Белый
+            </label>
+            <label class="filter__label">
+              <input class="filter__input filter__input--checkbox" type="checkbox" name="grey" checked>
+              Серый
+            </label>
+            <label class="filter__label">
+              <input class="filter__input filter__input--checkbox" type="checkbox" name="tiffany">
+              &laquo;Тиффани&raquo;
+            </label>
+            <label class="filter__label">
+              <input class="filter__input filter__input--checkbox" type="checkbox" name="black">
+              Черный
+            </label>
+            <label class="filter__label">
+              <input class="filter__input filter__input--checkbox" type="checkbox" name="pink">
+              Розовый
+            </label>
+            <label class="filter__label">
+              <input class="filter__input filter__input--checkbox" type="checkbox" name="orange">
+              Оранжевый
+            </label>
+          </fieldset>
+          <fieldset class="filter__fieldset">
+            <legend class="filter__legend">Фио</legend>
+            <label class="filter__label">
+              Имя:
+              <input class="filter__input filter__input--text" type="text" name="name" required>
+            </label>
+            <label class="filter__label">
+              Фамилия:
+              <input class="filter__input filter__input--text" type="text" name="surname" required>
+            </label>
+            <label class="filter__label">
+              Отчество:
+              <input class="filter__input filter__input--text" type="text" name="patronymic">
+            </label>
+          </fieldset>
+          <fieldset class="filter__fieldset">
+            <legend class="filter__legend">Тел</legend>
+            <input class="filter__input filter__input--tel" type="tel" name="tel" required>
+          </fieldset>
+          <fieldset class="filter__fieldset">
+            <legend class="filter__legend">E-mail</legend>
+            <input class="filter__input filter__input--email" type="email" name="email" required>
+          </fieldset>
+          <fieldset class="filter__fieldset">
+            <legend class="filter__legend">Доп</legend>
+            <textarea class="filter__wishes" name="optional" rows="10">
+              Опишите все ваши пожелания к заказу
+            </textarea>
+          </fieldset>
+          <p>&lowast;Поля обязаельны для заполнения</p>
+          <button class="" type="submit">Отправить заказ</button>
+        </form>
+      </section>
+    </main>
+    <footer class="page-footer">
+      <div class="page-footer__social social">
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__link social__link--instagram" href="#">Инстаграм</a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--facebook" href="#">Фейсбук</a>
+          </li>
+          <li class="social__item">
+            <a class="social__link--twitter" href="#">Твиттер</a>
+          </li>
+        </ul>
+      </div>
+      <div class="page-footer__copyright">
+        <p class="page-footer__text">Разработано</p>
+        <a class="page-footer__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+      </div>
+    </footer>
+  </body>
+</html>
