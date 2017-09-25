@@ -6,17 +6,26 @@
   </head>
   <body>
     <header class="page-header">
-      <div class="page-header-wrapper">
+      <div class="page-header__wrapper">
         <a class="page-header__logo" href="index.html">
           <img src="http://placehold.it/86x35" alt="Логотип компании">
         </a>
       </div>
-      <nav class="page-header__nav site-navigation">
-        <ul class="site-navigation__list">
-          <li class="site-navigation__item"><a href="#">Каталог товаров</a></li>
-          <li class="site-navigation__item"><a href="form.html">Вязание на заказ</a></li>
-          <li class="site-navigation__item"><a href="#">Поиск по сайту</a></li>
-          <li class="site-navigation__item"><a href="#">Корзина: пока пуста</a></li>
+      <nav class="site-navigation">
+        <button class="site-navigation__toggle" type="button">Открыть меню</button>
+        <ul class="site-list site-navigation__list">
+          <li class="site-list__item">
+            <a href="catalog.html">Каталог товаров</a>
+          </li>
+          <li class="site-list__item">
+            <a href="form.html">Вязание на заказ</a>
+          </li>
+          <li class="site-list__item">
+            <a href="#">Поиск по сайту</a>
+          </li>
+          <li class="site-list__item">
+            <a href="#">Корзина: пока пуста</a>
+          </li>
         </ul>
       </nav>
     </header>
@@ -73,5 +82,13 @@
         <a class="page-footer__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
       </div>
     </footer>
+    <section class="modal">
+      <h2 class="modal__title">Добавить в корзину</h2>
+      <p class="modal__text">Выберите размер:</p>
+      <p class="modal__item modal__item--s">S</p>
+      <p class="modal__item modal__item--m">M</p>
+      <p class="modal__item modal__item--l">L</p>
+      <button class="modal__button button" type="button">Добавить</button>
+    </section>
   </body>
 </html>
