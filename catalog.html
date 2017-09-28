@@ -3,8 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
-  <body>
+  <body class="container">
     <header class="page-header">
       <div class="page-header__wrapper">
         <a class="page-header__logo" href="index.html">
@@ -15,16 +16,16 @@
         <button class="site-navigation__toggle" type="button">Открыть меню</button>
         <ul class="site-list site-navigation__list">
           <li class="site-list__item">
-            <a href="catalog.html">Каталог товаров</a>
+            <a class="site-list__link" href="catalog.html">Каталог товаров</a>
           </li>
           <li class="site-list__item">
-            <a href="form.html">Вязание на заказ</a>
+            <a class="site-list__link" href="form.html">Вязание на заказ</a>
           </li>
           <li class="site-list__item">
-            <a href="#">Поиск по сайту</a>
+            <a class="site-list__link" href="#">Поиск по сайту</a>
           </li>
           <li class="site-list__item">
-            <a href="#">Корзина: пока пуста</a>
+            <a class="site-list__link" href="#">Корзина: пока пуста</a>
           </li>
         </ul>
       </nav>
@@ -35,36 +36,44 @@
         <ul class="catalog__list">
           <li class="catalog__item">
             <img class="catalog__image" src="http://placehold.it/260x195" alt="Игрушка - зайчик">
-            <h2 class="catalog__title">Зайчик попрыгайчик</h2>
-            <p class="catalog__text">Рост 30 см, вес 200г</p>
-            <p class="catalog__price">1200 руб.</p>
-            <a class="catalog__button" href="#">Купить</a>
+            <div class="catalog__wrapper">
+              <h2 class="catalog__title">Зайчик попрыгайчик</h2>
+              <p class="catalog__text">Рост 30 см, вес 200 г</p>
+              <p class="catalog__price">1 200 руб.</p>
+              <a class="catalog__button" href="#">Купить</a>
+            </div>
           </li>
-          <li>
+          <li class="catalog__item">
             <img class="catalog__image" src="http://placehold.it/260x195" alt="Корзинка для белья">
-            <h2 class="catalog__title">Корзинка для белья</h2>
-            <p class="catalog__text">Диаметр 15см, высота 10 см</p>
-            <p class="catalog__price">690 руб.</p>
-            <a class="catalog__button" href="#">Купить</a>
+            <div class="catalog__wrapper">
+              <h2 class="catalog__title">Корзинка для белья</h2>
+              <p class="catalog__text">Диаметр 15 см, высота 10 см</p>
+              <p class="catalog__price">690 руб.</p>
+              <a class="catalog__button" href="#">Купить</a>
+            </div>
           </li>
-          <li>
+          <li class="catalog__item">
             <img class="catalog__image" src="http://placehold.it/260x195" alt="Корзинка для игрушек">
-            <h2 class="catalog__title">Большая корзинка для игрушек</h2>
-            <p class="catalog__text">Диаметр 30 см, высота 30 см</p>
-            <p class="catalog__price">1500 руб.</p>
-            <a class="catalog__button" href="#">Купить</a>
+            <div class="catalog__wrapper">
+              <h2 class="catalog__title">Большая корзинка для игрушек</h2>
+              <p class="catalog__text">Диаметр 30 см, высота 30 см</p>
+              <p class="catalog__price">1 500 руб.</p>
+              <a class="catalog__button" href="#">Купить</a>
+            </div>
           </li>
         </ul>
       </section>
       <section class="details">
-        <h2 class="details__title">Процесс производства</h2>
-        <video  class="details__video" preload="metadata" width="260" height="150"></video>
-        <p class="details__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-        <a  class="details__button" href="#">Сделать заказ</a>
+        <div class="details__wrapper">
+          <h2 class="details__title">Процесс производства</h2>
+          <video  class="details__video" preload="metadata" width="260" height="150"></video>
+          <p class="details__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+          <a class="details__button button" href="#">Сделать заказ</a>
+        </div>
       </section>
     </main>
     <footer class="page-footer">
-      <div class="page-footer__social social">
+      <div class="social page-footer__social">
         <ul class="social__list">
           <li class="social__item">
             <a class="social__link social__link--instagram" href="#">Инстаграм</a>
@@ -79,16 +88,29 @@
       </div>
       <div class="page-footer__copyright">
         <p class="page-footer__text">Разработано</p>
-        <a class="page-footer__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+        <div class="page-footer__logo">
+          <a class="page-footer__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+        </div>
       </div>
     </footer>
     <section class="modal">
       <h2 class="modal__title">Добавить в корзину</h2>
       <p class="modal__text">Выберите размер:</p>
-      <p class="modal__item modal__item--s">S</p>
-      <p class="modal__item modal__item--m">M</p>
-      <p class="modal__item modal__item--l">L</p>
-      <button class="modal__button button" type="button">Добавить</button>
+      <form class="modal__filter" action="https://echo.htmlacademy.ru" method="get">
+        <label class="modal__label">
+          <input class="modal__item modal__item--s" type="radio" name="size" value="small">
+          S
+        </label>
+        <label class="modal__label">
+          <input class="modal__item modal__item--m" type="radio" name="size" value="medium">
+          M
+        </label>
+        <label class="modal__label">
+          <input class="modal__item modal__item--l" type="radio" name="size" value="large">
+          L
+        </label>
+        <button class="modal__button button" type="button">Добавить</button>
+      </form>
     </section>
   </body>
 </html>
