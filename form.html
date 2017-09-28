@@ -3,10 +3,11 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
-  <body>
+  <body class="container">
     <header class="page-header">
-      <div class="page-header_wrapper">
+      <div class="page-header__wrapper">
         <a class="page-header__logo" href="index.html">
           <img src="http://placehold.it/86x35" alt="Логотип компании">
         </a>
@@ -15,16 +16,16 @@
         <button class="site-navigation__toggle" type="button">Открыть меню</button>
         <ul class="site-list site-navigation__list">
           <li class="site-list__item">
-            <a href="catalog.html">Каталог товаров</a>
+            <a class="site-list__link" href="catalog.html">Каталог товаров</a>
           </li>
           <li class="site-list__item">
-            <a href="form.html">Вязание на заказ</a>
+            <a class="site-list__link" href="form.html">Вязание на заказ</a>
           </li>
           <li class="site-list__item">
-            <a href="#">Поиск по сайту</a>
+            <a class="site-list__link" href="#">Поиск по сайту</a>
           </li>
           <li class="site-list__item">
-            <a href="#">Корзина: пока пуста</a>
+            <a class="site-list__link" href="#">Корзина: пока пуста</a>
           </li>
         </ul>
       </nav>
@@ -32,8 +33,11 @@
     <main class="page-main">
       <section class="filters">
         <h1 class="filters__title">Вязание на заказ</h1>
-        <p class="filters__text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
-        <form class="filters__form filter" action="https://echo.htmlacademy.ru" method="get">
+        <p class="filters__text">
+          Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую
+          форму заказа и мы свяжемся с вами, чтобы уточнить детали.
+        </p>
+        <form class="filter filters__form" action="https://echo.htmlacademy.ru" method="get">
           <fieldset class="filter__fieldset">
             <legend class="filter__legend">Тип</legend>
             <label class="filter__label">
@@ -101,8 +105,8 @@
               Опишите все ваши пожелания к заказу
             </textarea>
           </fieldset>
-          <p>&lowast;Поля обязаельны для заполнения</p>
-          <button class="" type="submit">Отправить заказ</button>
+          <p class="filter__text">&lowast;Поля обязательны для заполнения</p>
+          <button class="filter__button button" type="submit">Отправить заказ</button>
         </form>
       </section>
     </main>
@@ -122,7 +126,9 @@
       </div>
       <div class="page-footer__copyright">
         <p class="page-footer__text">Разработано</p>
-        <a class="page-footer__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+        <div class="page-footer__logo">
+          <a class="page-footer__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+        </div>
       </div>
     </footer>
   </body>
