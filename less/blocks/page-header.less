@@ -1,3 +1,41 @@
 .page-header {
-  padding: 0 30px;
+  // padding: 0 30px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.page-header__wrapper {
+  flex-basis: 86px;
+  flex-grow: 2;
+  margin-right: 65px;
+  text-align: right;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header {
+    position: relative;
+    flex-wrap: wrap;
+  }
+
+  .page-header__wrapper {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    margin: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header {
+    display: block;
+  }
+
+  .page-header__wrapper {
+    position: absolute;
+    top: 25px;
+    left: 470px;
+    margin: 0;
+  }
 }
