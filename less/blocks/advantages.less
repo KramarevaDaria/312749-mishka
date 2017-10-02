@@ -25,28 +25,37 @@
 }
 
 @media (min-width: @tablet-width) {
-  .advantages__wrapper {
-    display: flex;
-  }
-
   .advantages__list {
     display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
-    flex-basis: 334px;
-  }
-
-  .advantages__list--left {
-    padding-right: 100px;
-  }
-
-  .advantages__list--right {
-    padding-right: 40px;
+    width: 668px;
   }
 
   .advantages__item {
+    flex-basis: 240px;
     text-align: left;
+    padding-right: 74px;
   }
+}
+
+.advantages__item:nth-child(2) {
+  order: 2;
+}
+
+.advantages__item:nth-child(3) {
+  order: 4;
+}
+
+.advantages__item:nth-child(4) {
+  order: 1;
+}
+
+.advantages__item:nth-child(5) {
+  order: 3;
+}
+
+.advantages__item:nth-child(6) {
+  order: 5;
 }
 
 @media (min-width: @desktop-width) {
