@@ -24,3 +24,29 @@
   font-size: 17px;
   line-height: 17px;
 }
+
+@media (min-width: @tablet-width) {
+  .details__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .details__video {
+    order: -1;
+    background-image: url("../img/video-mobile@1x.jpg");
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .details__wrapper {
+    position: relative;
+    margin-bottom: 105px;
+    padding-left: 760px;
+  }
+
+  .details__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
