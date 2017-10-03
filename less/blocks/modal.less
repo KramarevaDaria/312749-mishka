@@ -1,5 +1,6 @@
 .modal {
-  padding: 0 30px;
+  display: flex;
+  flex-direction: column;
 }
 
 .modal__title {
@@ -14,7 +15,14 @@
   color: #444444;
 }
 
+.modal__filter {
+  display: flex;
+  flex-wrap: wrap;
+  width: 350px;
+}
+
 .modal__label {
+  flex-basis: 110px;
   font-size: 17px;
   font-weight: bold;
   line-height: 17px;
@@ -22,6 +30,7 @@
 }
 
 .modal__button {
+  flex-basis: 350px;
   font-size: 17px;
   line-height: 17px;
   color: #ffffff;

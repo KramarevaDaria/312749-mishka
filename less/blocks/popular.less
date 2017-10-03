@@ -1,38 +1,160 @@
-.popular {
-  padding: 33px 30px 35px;
-}
 .popular__title {
   margin: 0;
+  margin-bottom: 5px;
+  padding-top: 30px;
   font-size: 25px;
   line-height: 30px;
 }
 
 .popular__ad {
+  margin: 0;
+  margin-bottom: 25px;
   color: #63d1bb;
   font-weight: bold;
   text-transform: uppercase;
 }
 
 .popular__text {
+  margin: 0;
+  margin-bottom: 25px;
   font-size: 15px;
   line-height: 24px;
   color: #444444;
 }
 
 .popular__list {
+  width: 100%;
+  margin-bottom: 30px;
   font-size: 15px;
   line-height: 24px;
   color: #444444;
+  border-collapse: collapse;
+}
+
+.popular__field {
+  padding: 10px 0;
+  border-bottom: 1px solid #ececec;
+}
+
+.popular__value {
+  padding: 10px 0;
+  border-bottom: 1px solid #ececec;
 }
 
 .popular__price {
+  margin-bottom: 30px;
   font-size: 17px;
   font-weight: bold;
   line-height: 24px;
+  text-align: center;
   color: #444444;
 }
 
 .popular__button {
   font-size: 17px;
   line-height: 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .popular__wrapper {
+    display: flex;
+    margin-bottom: 55px;
+  }
+
+  .popular__title {
+    flex-basis: 540px;
+    margin: 0;
+    padding: 0;
+    padding-top: 50px;
+    text-align: left;
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  .popular__ad {
+    flex-basis: 128px;
+    margin: 0;
+    padding-top: 60px;
+    text-align: center;
+    line-height: 17px;
+  }
+
+  .popular__column {
+    position: relative;
+    padding-right: 370px;
+  }
+
+  .popular__image {
+    position: absolute;
+    top: 5px;
+    right: 0;
+  }
+
+  .popular__text {
+    flex-basis: 290px;
+    margin-bottom: 40px;
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  .popular__list {
+    flex-basis: 290px;
+    width: 290px;
+    margin-bottom: 55px;
+    line-height: 20px;
+  }
+
+  .popular__price {
+    flex-basis: 290px;
+    font-size: 20px;
+  }
+
+  .popular__button {
+    flex-basis: 290px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .popular {
+    position: relative;
+    margin-bottom: 35px;
+  }
+
+  .popular__wrapper {
+    width: 800px;
+  }
+
+  .popular__title {
+    position: relative;
+    z-index: 100;
+    flex-basis: 620px;
+    margin: 0;
+    margin-left: 10px;
+    margin-top: 120px;
+    padding: 0;
+    font-size: 53px;
+    line-height: 57px;
+    text-align: left;
+  }
+
+  .popular__ad {
+    flex-basis: 75px;
+    order: -1;
+    margin: 0;
+    margin-top: 120px;
+    padding: 0 40px;
+    padding-top: 15px;
+    line-height: 17px;
+  }
+
+  .popular__column {
+    position: static;
+    margin-left: 175px;
+    padding-right: 580px;
+  }
+
+  .popular__image {
+    top: 70px;
+    z-index: -5;
+  }
 }
