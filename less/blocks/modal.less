@@ -1,6 +1,7 @@
 .modal {
   display: flex;
   flex-direction: column;
+  padding: 0 30px;
 }
 
 .modal__title {
@@ -35,4 +36,19 @@
   line-height: 17px;
   color: #ffffff;
   background-color: #63d1bb;
+}
+
+@media (min-width: @tablet-width) {
+  .modal {
+    padding: 0 110px;
+  }
+
+  .modal__title {
+    font-size: 30px;
+    line-height: 57px;
+  }
+
+  .modal__text {
+    font-size: 17px;
+  }
 }

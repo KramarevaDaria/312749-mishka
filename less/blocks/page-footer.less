@@ -1,5 +1,5 @@
 .page-footer {
-  // padding: 0 30px;
+  padding: 0 30px;
   background-color: #f1f1f1;
 }
 
@@ -23,6 +23,7 @@
   .page-footer {
     display: flex;
     justify-content: space-between;
+    padding: 0 50px;
   }
 
   .page-footer__wrapper {
@@ -36,5 +37,11 @@
 
   .page-footer__copyright {
     flex-basis: 185px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-footer {
+    padding: 0 100px;
   }
 }

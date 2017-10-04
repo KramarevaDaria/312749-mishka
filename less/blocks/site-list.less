@@ -1,8 +1,17 @@
 .site-list {
+  position: absolute;
+  top: 53px;
+  right: -30px;
   display: none;
+  width: 320px;
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.site-list__item {
+  padding: 25px 30px 25px 75px;
+  border-top: 1px solid #ececec;
 }
 
 .site-list__link {
@@ -18,10 +27,17 @@
 
 @media (min-width: @tablet-width) {
   .site-list {
+    position: static;
     display: flex;
     justify-content: flex-end;
     flex-wrap: wrap;
-    margin-bottom: -35px;
+    width: 668px;
+    margin-bottom: -65px;
+  }
+
+  .site-list__item {
+    padding: 0;
+    border: none;
   }
 
   .site-list__item--catalog {
@@ -76,7 +92,7 @@
     flex-wrap: wrap;
     width: 1050px;
     margin: 0;
-    margin-bottom: -45px;
+    margin-bottom: -80px;
   }
 
   .site-list__item--catalog {

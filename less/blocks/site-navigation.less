@@ -1,5 +1,7 @@
 .site-navigation {
   // width: 20px;
+  position: relative;
+  flex-basis: 20px;
   font-size: 17px;
   font-weight: bold;
   line-height: 24px;
@@ -13,7 +15,17 @@
 }
 
 @media (min-width: @tablet-width) {
+  .site-navigation {
+    flex-basis: 668px;
+  }
+
   .site-navigation__toggle {
     display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .site-navigation {
+    flex-basis: 1050px;
   }
 }

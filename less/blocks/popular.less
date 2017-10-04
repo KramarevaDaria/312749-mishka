@@ -1,3 +1,7 @@
+.popular {
+  padding: 0 30px;
+}
+
 .popular__title {
   margin: 0;
   margin-bottom: 5px;
@@ -26,7 +30,7 @@
   width: 100%;
   margin-bottom: 30px;
   font-size: 15px;
-  line-height: 24px;
+  line-height: 20px;
   color: #444444;
   border-collapse: collapse;
 }
@@ -43,7 +47,6 @@
 
 .popular__price {
   margin-bottom: 30px;
-  font-size: 17px;
   font-weight: bold;
   line-height: 24px;
   text-align: center;
@@ -56,6 +59,10 @@
 }
 
 @media (min-width: @tablet-width) {
+  .popular {
+    padding: 0 50px;
+  }
+
   .popular__wrapper {
     display: flex;
     margin-bottom: 55px;
@@ -118,6 +125,7 @@
   .popular {
     position: relative;
     margin-bottom: 35px;
+    padding: 0 100px;
   }
 
   .popular__wrapper {
@@ -155,6 +163,7 @@
 
   .popular__image {
     top: 70px;
+    right: 100px;
     z-index: -5;
   }
 }
