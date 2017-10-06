@@ -1,5 +1,6 @@
 .popular {
   padding: 0 30px;
+  margin-bottom: 35px;
 }
 
 .popular__title {
@@ -45,7 +46,12 @@
   border-bottom: 1px solid #ececec;
 }
 
+.popular__image {
+  margin-bottom: 25px;
+}
+
 .popular__price {
+  margin: 0;
   margin-bottom: 30px;
   font-weight: bold;
   line-height: 24px;
@@ -54,6 +60,7 @@
 }
 
 .popular__button {
+  width: 260px;
   font-size: 17px;
   line-height: 20px;
 }
@@ -65,14 +72,14 @@
 
   .popular__wrapper {
     display: flex;
-    margin-bottom: 55px;
+    margin-bottom: 45px;
   }
 
   .popular__title {
     flex-basis: 540px;
     margin: 0;
     padding: 0;
-    padding-top: 50px;
+    padding-top: 45px;
     text-align: left;
     font-size: 43px;
     line-height: 50px;
@@ -98,48 +105,49 @@
   }
 
   .popular__text {
-    flex-basis: 290px;
-    margin-bottom: 40px;
+    width: 290px;
+    margin-bottom: 45px;
     font-size: 17px;
     line-height: 30px;
   }
 
   .popular__list {
-    flex-basis: 290px;
     width: 290px;
     margin-bottom: 55px;
     line-height: 20px;
   }
 
   .popular__price {
-    flex-basis: 290px;
+    width: 290px;
+    margin-bottom: 35px;
     font-size: 20px;
   }
 
   .popular__button {
-    flex-basis: 290px;
+    width: 292px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .popular {
     position: relative;
-    margin-bottom: 35px;
+    margin-bottom: 80px;
     padding: 0 100px;
   }
 
   .popular__wrapper {
-    width: 800px;
+    width: 1050px;
   }
 
   .popular__title {
     position: relative;
     z-index: 100;
-    flex-basis: 620px;
+    flex-basis: 870px;
     margin: 0;
     margin-left: 10px;
-    margin-top: 120px;
     padding: 0;
+    padding-top: 125px;
+    padding-right: 100px;
     font-size: 53px;
     line-height: 57px;
     text-align: left;
@@ -149,9 +157,8 @@
     flex-basis: 75px;
     order: -1;
     margin: 0;
-    margin-top: 120px;
     padding: 0 40px;
-    padding-top: 15px;
+    padding-top: 140px;
     line-height: 17px;
   }
 
@@ -165,5 +172,13 @@
     top: 70px;
     right: 100px;
     z-index: -5;
+  }
+
+  .popular__text {
+    margin-bottom: 55px;
+  }
+
+  .popular__list {
+    margin-bottom: 105px;
   }
 }

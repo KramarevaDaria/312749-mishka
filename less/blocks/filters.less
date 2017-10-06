@@ -1,4 +1,5 @@
 .filters__title {
+  margin: 0;
   padding: 75px 30px;
   font-size: 27px;
   line-height: 30px;
@@ -8,7 +9,9 @@
 }
 
 .filters__text {
-  padding: 0 30px;
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 30px 30px 0;
   font-size: 13px;
   line-height: 24px;
   color: #444444;
@@ -20,13 +23,14 @@
 
 @media (min-width: @tablet-width) {
   .filters__title {
-    padding: 90px 50px;
+    padding: 90px 50px 80px;
     font-size: 43px;
     line-height: 50px;
   }
 
   .filters__text {
-    padding: 0 50px;
+    margin-bottom: 60px;
+    padding: 75px 50px 0;
     font-size: 17px;
     line-height: 30px;
   }
@@ -44,7 +48,7 @@
   }
 
   .filters__text {
-    padding: 0 100px;
+    padding: 125px 100px 0;
   }
 
   .filters__form {
