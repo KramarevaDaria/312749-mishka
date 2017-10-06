@@ -73,69 +73,75 @@
             форму заказа и мы свяжемся с вами, чтобы уточнить детали.
           </p>
           <form class="filter filters__form" action="https://echo.htmlacademy.ru" method="get">
-            <fieldset class="filter__fieldset">
-              <legend class="filter__legend">Тип</legend>
-              <label class="filter__label">
-                <input class="filter__input filter__input--radio" type="radio" name="type" value="accessory" checked>
-                Аксессуар для интерьера
-              </label>
-              <label class="filter__label">
-                <input class="filter__input filter__input--radio" type="radio" name="type" value="toy">
-                Детская игрушка
-              </label>
+            <fieldset class="filter__fieldset filter__fieldset--type">
+              <legend class="filter__legend filter__legend--type">Тип</legend>
+              <div class="filter__wrapper filter__wrapper--type">
+                <label class="filter__label filter__label--type">
+                  <input class="filter__input filter__input--radio" type="radio" name="type" value="accessory" checked>
+                  Аксессуар для интерьера
+                </label>
+                <label class="filter__label filter__label--type">
+                  <input class="filter__input filter__input--radio" type="radio" name="type" value="toy">
+                  Детская игрушка
+                </label>
+              </div>
             </fieldset>
-            <fieldset class="filter__fieldset">
-              <legend class="filter__legend">Цвет</legend>
-              <label class="filter__label">
-                <input class="filter__input filter__input--checkbox" type="checkbox" name="white" checked>
-                Белый
-              </label>
-              <label class="filter__label">
-                <input class="filter__input filter__input--checkbox" type="checkbox" name="grey" checked>
-                Серый
-              </label>
-              <label class="filter__label">
-                <input class="filter__input filter__input--checkbox" type="checkbox" name="tiffany">
-                &laquo;Тиффани&raquo;
-              </label>
-              <label class="filter__label">
-                <input class="filter__input filter__input--checkbox" type="checkbox" name="black">
-                Черный
-              </label>
-              <label class="filter__label">
-                <input class="filter__input filter__input--checkbox" type="checkbox" name="pink">
-                Розовый
-              </label>
-              <label class="filter__label">
-                <input class="filter__input filter__input--checkbox" type="checkbox" name="orange">
-                Оранжевый
-              </label>
+            <fieldset class="filter__fieldset filter__fieldset--color">
+              <legend class="filter__legend filter__legend--color">Цвет</legend>
+              <div class="filter__wrapper filter__wrapper--color">
+                <label class="filter__label filter__label--color">
+                  <input class="filter__input filter__input--checkbox" type="checkbox" name="white" checked>
+                  Белый
+                </label>
+                <label class="filter__label filter__label--color">
+                  <input class="filter__input filter__input--checkbox" type="checkbox" name="grey" checked>
+                  Серый
+                </label>
+                <label class="filter__label filter__label--color">
+                  <input class="filter__input filter__input--checkbox" type="checkbox" name="tiffany">
+                  &laquo;Тиффани&raquo;
+                </label>
+                <label class="filter__label filter__label--color">
+                  <input class="filter__input filter__input--checkbox" type="checkbox" name="black">
+                  Черный
+                </label>
+                <label class="filter__label filter__label--color">
+                  <input class="filter__input filter__input--checkbox" type="checkbox" name="pink">
+                  Розовый
+                </label>
+                <label class="filter__label filter__label--color">
+                  <input class="filter__input filter__input--checkbox" type="checkbox" name="orange">
+                  Оранжевый
+                </label>
+              </div>
             </fieldset>
-            <fieldset class="filter__fieldset">
-              <legend class="filter__legend">Фио</legend>
-              <label class="filter__label">
-                Имя:
-                <input class="filter__input filter__input--text" type="text" name="name" required>
-              </label>
-              <label class="filter__label">
-                Фамилия:
-                <input class="filter__input filter__input--text" type="text" name="surname" required>
-              </label>
-              <label class="filter__label">
-                Отчество:
-                <input class="filter__input filter__input--text" type="text" name="patronymic">
-              </label>
+            <fieldset class="filter__fieldset  filter__fieldset--name">
+              <legend class="filter__legend filter__legend--name">Фио</legend>
+              <div class="filter__wrapper filter__wrapper--name">
+                <label class="filter__label filter__label--name">
+                  Имя:
+                  <input class="filter__input filter__input--text" type="text" name="name" required>
+                </label>
+                <label class="filter__label filter__label--name">
+                  Фамилия:
+                  <input class="filter__input filter__input--text" type="text" name="surname" required>
+                </label>
+                <label class="filter__label filter__label--name">
+                  Отчество:
+                  <input class="filter__input filter__input--text" type="text" name="patronymic">
+                </label>
+              </div>
             </fieldset>
-            <fieldset class="filter__fieldset">
-              <legend class="filter__legend">Тел</legend>
+            <fieldset class="filter__fieldset  filter__fieldset--tel">
+              <legend class="filter__legend filter__legend--tel">Тел</legend>
               <input class="filter__input filter__input--tel" type="tel" name="tel" required>
             </fieldset>
-            <fieldset class="filter__fieldset">
-              <legend class="filter__legend">E-mail</legend>
+            <fieldset class="filter__fieldset  filter__fieldset--email">
+              <legend class="filter__legend filter__legend--email">E-mail</legend>
               <input class="filter__input filter__input--email" type="email" name="email" required>
             </fieldset>
-            <fieldset class="filter__fieldset">
-              <legend class="filter__legend">Доп</legend>
+            <fieldset class="filter__fieldset  filter__fieldset--ad">
+              <legend class="filter__legend filter__legend--ad">Доп</legend>
               <textarea class="filter__wishes" name="optional" rows="10">
                 Опишите все ваши пожелания к заказу
               </textarea>
