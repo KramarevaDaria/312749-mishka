@@ -1,5 +1,16 @@
 .user-menu {
   display: none;
+  list-style: none;
+}
+
+.user-menu__item {
+  padding: 25px 30px 25px 75px;
+  border-top: 1px solid #ececec;
+}
+
+.user-menu__link {
+  color: #000000;
+  text-decoration: none;
 }
 
 @media (min-width: @tablet-width) {
@@ -11,6 +22,10 @@
     list-style: none;
   }
 
+  .user-menu__item {
+    padding: 0;
+    border-top: none;
+  }
   .user-menu__item--search {
     width: 18px;
     padding: 30px;
@@ -24,10 +39,5 @@
     background-repeat: no-repeat;
     background-position: 30px 32px;
     border-left: 1px solid #ececec;
-  }
-
-  .user-menu__link {
-    color: #000000;
-    text-decoration: none;
   }
 }

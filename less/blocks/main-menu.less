@@ -1,5 +1,16 @@
 .main-menu {
   display: none;
+  list-style: none;
+}
+
+.main-menu__item {
+  padding: 25px 30px 25px 75px;
+  border-top: 1px solid #ececec;
+}
+
+.main-menu__link {
+  color: #000000;
+  text-decoration: none;
 }
 
 @media (min-width: @tablet-width) {
@@ -13,6 +24,11 @@
     list-style: none;
   }
 
+  .main-menu__item {
+    padding: 0;
+    border-top: none;
+  }
+
   .main-menu__item--catalog {
     width: 140px;
     padding-top: 20px;
@@ -23,11 +39,6 @@
     width: 140px;
     padding-top: 20px;
     font-size: 15px;
-  }
-
-  .main-menu__link {
-    color: #000000;
-    text-decoration: none;
   }
 }
 

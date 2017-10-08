@@ -1,5 +1,16 @@
 .offer-menu {
   display: none;
+  list-style: none;
+}
+
+.offer-menu__item {
+  padding: 25px 30px 25px 75px;
+  border-top: 1px solid #ececec;
+}
+
+.offer-menu__link {
+  color: #000000;
+  text-decoration: none;
 }
 
 @media (min-width: @desktop-width) {
@@ -11,6 +22,12 @@
     padding: 0;
     list-style: none;
   }
+
+  .offer-menu__item {
+    padding: 0;
+    border-top: none;
+  }
+
 
   .offer-menu__item--new {
     width: 165px;
@@ -24,10 +41,5 @@
     padding-top: 20px;
     font-size: 15px;
     line-height: 24px;
-  }
-
-  .offer-menu__link {
-    color: #000000;
-    text-decoration: none;
   }
 }
