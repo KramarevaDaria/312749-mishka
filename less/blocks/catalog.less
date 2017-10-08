@@ -1,7 +1,7 @@
 .catalog__title-main {
   margin: 0;
   margin-bottom: 30px;
-  // padding: 75px 30px;
+  padding: 70px 30px 75px;
   font-size: 27px;
   line-height: 30px;
   text-align: center;
@@ -11,43 +11,74 @@
 
 .catalog__list {
   margin: 0;
-  margin-bottom: 30px;
-  padding: 0;
+  padding: 0 30px;
   list-style: none;
 }
 
-.catalog__wrapper {
-  // padding-left: 28px;
+.catalog__item {
+  margin-bottom: 30px;
   border: 1px solid #ededed;
 }
 
+.catalog__wrapper {
+  padding: 25px 30px;
+}
+
 .catalog__title {
+  margin: 0;
+  margin-bottom: 10px;
   font-size: 17px;
   line-height: 24px;
   font-weight: bold;
 }
 
+.catalog__title a {
+  text-decoration: none;
+  color: #000000;
+}
+
 .catalog__text {
+  margin: 0;
+  padding-bottom: 20px;
   font-size: 13px;
   line-height: 30px;
   color: #444444;
-  border-bottom: 1px solid #ececec;
+}
+
+.catalog__column-price {
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+  padding-top: 20px;
+  border-top: 1px solid #ececec;
 }
 
 .catalog__price {
+  margin: 0;
+  flex-basis: 75px;
   font-size: 15px;
   font-weight: bold;
   line-height: 24px;
 }
 
+.catalog__button {
+  flex-basis: 21px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+}
+
 @media (min-width: @tablet-width) {
   .catalog__title-main {
-    padding-top: 95px;
-    padding-bottom: 75px;
+    margin-bottom: 80px;
+    padding: 100px 50px 80px;
+    font-size: 43px;
+    line-height: 50px;
   }
 
   .catalog__list {
     margin: 0;
+    padding: 0 50px;
   }
 
   .catalog__item {
@@ -56,18 +87,48 @@
     margin-bottom: 55px;
   }
 
-  .catalog__image {
+  .catalog__link {
     flex-basis: 334px;
+  }
+
+  .catalog__image {
     height: 334px;
   }
 
   .catalog__wrapper {
-    flex-basis: 274px;
-    padding: 0 30px;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 268px;
+    justify-content: space-between;
+    padding: 25px 30px 30px;
+  }
+
+  .catalog__title {
+    font-size: 20px;
+  }
+
+  .catalog__text {
+    padding-bottom: 0;
+    font-size: 15px;
+  }
+
+  .catalog__column-price {
+    width: 268px;
+  }
+
+  .catalog__price {
+    flex-basis: 85px;
+    font-size: 17px;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .catalog__title-main {
+    padding: 100px 50px 100px;
+    font-size: 53px;
+    line-height: 57px;
+  }
+
   .catalog__list {
     display: flex;
     justify-content: space-between;
@@ -75,6 +136,14 @@
 
   .catalog__item {
     flex-direction: column;
-    flex-basis: 315px;
+    width: 315px;
+  }
+
+  .catalog__wrapper {
+    flex-basis: 145px;
+  }
+
+  .catalog__column-price {
+    width: 256px;
   }
 }

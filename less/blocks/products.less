@@ -1,7 +1,8 @@
 .products {
-  font-size: 19px;
-  font-weight: bold;
-  line-height: 24px;
+  background-image: url("../img/hero-mobile@1x.jpg");
+  background-color: #f9f9f9;
+  background-repeat: no-repeat;
+  background-position: center -15px;
 }
 
 .products__list {
@@ -12,21 +13,19 @@
 
 .products__title {
   margin: 0;
-  padding: 75px 0 120px;
+  padding: 70px 30px 125px;
   text-align: center;
   font-size: 27px;
   line-height: 30px;
-  background-image: url("../img/hero-mobile@1x.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: #f9f9f9;
   border-top: 1px solid #ececec;
 }
 
 .products__link {
   display: block;
-  padding: 25px 0 30px;
-  padding-right: 184px;
+  padding: 25px 184px 30px 30px;
+  font-size: 19px;
+  font-weight: bold;
+  line-height: 24px;
 }
 
 .products__link--interior {
@@ -34,7 +33,7 @@
   background-color: #63d1bb;
   background-image: url("../../img/icon-interior.svg");
   background-repeat: no-repeat;
-  background-position: 215px 23px;
+  background-position: 243px 23px;
   text-decoration: none;
 }
 
@@ -43,18 +42,21 @@
   background-color: #56c3b2;
   background-image: url("../../img/icon-toy.svg");
   background-repeat: no-repeat;
-  background-position: 200px 20px;
+  background-position: 233px 20px;
   text-decoration: none;
 }
 
 @media (min-width: @tablet-width) {
   .products__title {
-    padding: 160px 0 370px;
+    padding: 150px 50px 370px;
+    font-size: 43px;
+    line-height: 50px;
   }
 
   .products__list {
     display: flex;
-    justify-content: space-around;
+    padding-left: 50px;
+    padding-right: 50px;
   }
 
   .products__item {
@@ -77,6 +79,17 @@
 }
 
 @media (min-width: @desktop-width) {
+  .products__title {
+    padding: 150px 50px 355px;
+    font-size: 53px;
+    line-height: 56px;
+  }
+
+  .products__list {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
   .products__item {
     flex-basis: 525px;
   }
