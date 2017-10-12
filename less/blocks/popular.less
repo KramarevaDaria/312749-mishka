@@ -46,8 +46,10 @@
   border-bottom: 1px solid #ececec;
 }
 
-.popular__image {
+.popular__image-wrapper {
+  margin: 0;
   margin-bottom: 25px;
+  padding:0;
 }
 
 .popular__price {
@@ -98,15 +100,16 @@
     padding-right: 370px;
   }
 
-  .popular__image {
+  .popular__image-wrapper {
     position: absolute;
-    top: 5px;
+    top: 7px;
     right: 0;
+    margin: 0;
   }
 
   .popular__text {
     width: 290px;
-    margin-bottom: 45px;
+    margin-bottom: 35px;
     font-size: 17px;
     line-height: 30px;
   }
@@ -166,14 +169,10 @@
     padding-right: 580px;
   }
 
-  .popular__image {
-    top: 70px;
-    right: 100px;
+  .popular__image-wrapper {
+    top: 68px;
+    right: 50px;
     z-index: -5;
-  }
-
-  .popular__text {
-    margin-bottom: 55px;
   }
 
   .popular__list {

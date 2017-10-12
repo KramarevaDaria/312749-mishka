@@ -19,10 +19,80 @@
   list-style: none;
 }
 
+.advantages__item {
+  position: relative;
+  padding-top: 80px;
+
+  &:nth-child(1)::before {
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: 7px;
+    width: 33px;
+    height: 38px;
+    background-image: url("../img/icon-feature-flower.svg");
+    background-repeat: no-repeat;
+  }
+
+  &:nth-child(2)::before {
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 47px;
+    height: 27px;
+    background-image: url("../img/icon-feature-money.svg");
+    background-repeat: no-repeat;
+  }
+
+  &:nth-child(3)::before {
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: 7px;
+    width: 34px;
+    height: 27px;
+    background-image: url("../img/icon-feature-heart.svg");
+    background-repeat: no-repeat;
+  }
+
+  &:nth-child(4)::before {
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: 3px;
+    width: 35px;
+    height: 34px;
+    background-image: url("../img/icon-feature-ball.svg");
+    background-repeat: no-repeat;
+  }
+
+  &:nth-child(5)::before {
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: -6px;
+    width: 55px;
+    height: 23px;
+    background-image: url("../img/icon-feature-rocket.svg");
+    background-repeat: no-repeat;
+  }
+
+  &:nth-child(6)::before {
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: 3px;
+    width: 33px;
+    height: 32px;
+    background-image: url("../img/icon-feature-gift.svg");
+    background-repeat: no-repeat;
+  }
+}
+
 .advantages__text {
   margin: 0;
   padding: 0;
-  padding-top: 80px;
 }
 
 @media (min-width: @tablet-width) {
@@ -39,6 +109,7 @@
   .advantages__list {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     width: 668px;
   }
 
@@ -46,41 +117,36 @@
     flex-basis: 240px;
     text-align: left;
     padding-right: 35px;
+    padding-top: 105px;
     font-size: 20px;
     line-height: 22px;
+
+    &:nth-child(2) {
+      order: 2;
+    }
+
+    &:nth-child(3) {
+      order: 4;
+    }
+
+    &:nth-child(4) {
+      order: 1;
+      flex-basis: 300px;
+    }
+
+    &:nth-child(5) {
+      order: 3;
+      flex-basis: 300px;
+    }
+
+    &:nth-child(6) {
+      order: 5;
+      flex-basis: 300px;
+    }
   }
 
-  .advantages__item:nth-child(1) {
-    padding-right: 73px;
-  }
-
-  .advantages__item:nth-child(2) {
-    order: 2;
-    padding-right: 73px;
-  }
-
-  .advantages__item:nth-child(3) {
-    order: 4;
-    padding-right: 73px;
-  }
-
-  .advantages__item:nth-child(4) {
-    order: 1;
-    flex-basis: 300px;
-  }
-
-  .advantages__item:nth-child(5) {
-    order: 3;
-    flex-basis: 300px;
-  }
-
-  .advantages__item:nth-child(6) {
-    order: 5;
-    flex-basis: 300px;
-  }
-
-  .advantages__text {
-    padding-top: 105px;
+  .advantages__item:nth-child(n)::before {
+      top: 50px;
   }
 }
 

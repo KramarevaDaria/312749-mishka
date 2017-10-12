@@ -3,6 +3,10 @@
   background-color: #f9f9f9;
   background-repeat: no-repeat;
   background-position: center -15px;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/hero-mobile@2x.jpg");
+  }
 }
 
 .products__list {
@@ -21,6 +25,7 @@
 }
 
 .products__link {
+  position: relative;
   display: block;
   padding: 25px 184px 30px 30px;
   font-size: 19px;
@@ -31,22 +36,46 @@
 .products__link--interior {
   color: #ffffff;
   background-color: #63d1bb;
-  background-image: url("../../img/icon-interior.svg");
-  background-repeat: no-repeat;
-  background-position: 243px 23px;
   text-decoration: none;
+}
+
+.products__link--interior span {
+  position: absolute;
+  top: 23px;
+  left: 243px;
+
+}
+
+.products__icon--interior {
+  fill: #37b29f;
 }
 
 .products__link--toys {
   color: #ffffff;
   background-color: #56c3b2;
-  background-image: url("../../img/icon-toy.svg");
-  background-repeat: no-repeat;
-  background-position: 233px 20px;
   text-decoration: none;
 }
 
+.products__link--toys span {
+  position: absolute;
+  top: 20px;
+  left: 233px;
+}
+
+.products__icon--toys {
+  fill: #30ab9b;
+}
+
 @media (min-width: @tablet-width) {
+  .products {
+    background-image: url("../img/hero-tablet@1x.jpg");
+    background-position: center -5px;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/bg-header@2x.jpg");
+    }
+  }
+
   .products__title {
     padding: 150px 50px 370px;
     font-size: 43px;
@@ -69,16 +98,27 @@
     line-height: 30px;
   }
 
-  .products__link--interior {
-    background-position: 255px 30px;
+  .products__link--interior span {
+    top: 30px;
+    left: 255px;
   }
 
-  .products__link--toys {
-    background-position: 240px 30px;
+  .products__link--toys span {
+    top: 30px;
+    left: 240px;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .products {
+    background-image: url("../img/hero-desktop@1x.jpg");
+    background-position: center -10px;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/hero-desktop@2x.jpg");
+    }
+  }
+
   .products__title {
     padding: 150px 50px 355px;
     font-size: 53px;
@@ -98,11 +138,13 @@
     padding-right: 375px;
   }
 
-  .products__link--interior {
-    background-position: 450px 30px;
+  .products__link--interior span {
+    top: 30px;
+    left: 450px;
   }
 
-  .products__link--toys {
-    background-position: 430px 30px;
+  .products__link--toys span {
+    top: 30px;
+    left: 430px;
   }
 }

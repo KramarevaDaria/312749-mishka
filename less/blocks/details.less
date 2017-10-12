@@ -9,10 +9,22 @@
 }
 
 .details__title {
+  position: relative;
   margin: 0;
   padding: 25px 40px 25px 90px;
   font-size: 17px;
   line-height: 24px;
+}
+
+.details__title::before {
+  content: "";
+  position: absolute;
+  top: 32px;
+  left: 35px;
+  width: 32px;
+  height: 30px;
+  background-image: url("../img/icon-video.svg");
+  background-repeat: no-repeat;
 }
 
 .details__video {
@@ -20,12 +32,19 @@
   width: 260px;
   height: 150px;
   background-image: url("../img/video-mobile@1x.jpg");
+  background-repeat: no-repeat;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/video-mobile@2x.jpg");
+  }
 }
 
 .details__control {
   position: absolute;
-  top: 20px;
+  top: 36px;
   left: 80px;
+  width: 102px;
+  height: 78px;
   border: none;
   background-color: transparent;
 }
@@ -63,10 +82,26 @@
     font-size: 20px;
   }
 
+  .details__title::before {
+    top: 35px;
+    left: 42px;
+  }
+
   .details__video {
     position: relative;
     order: -1;
-    background-image: url("../img/video-mobile@1x.jpg");
+    width: 668px;
+    height: 445px;
+    background-image: url("../img/video-tablet@1x.jpg");
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/video-tablet@2x.jpg");
+    }
+  }
+
+  .details__control {
+    top: 189px;
+    left: 283px;
   }
 
   .details__text {
@@ -86,6 +121,7 @@
   .details__wrapper {
     position: relative;
     margin-bottom: 105px;
+    padding: 0;
     padding-left: 682px;
   }
 
@@ -93,18 +129,36 @@
     padding: 95px 55px 35px 80px;
   }
 
+  .details__title::before {
+    top: 43px;
+    left: 80px;
+  }
+
   .details__video {
     position: absolute;
     top: 0;
     left: 0;
+    width: 682px;
+    height: 455px;
+    background-image: url("../img/video-desktop@1x.jpg");
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/video-desktop@2x.jpg");
+    }
+  }
+
+  .details__control {
+    top: 189px;
+    left: 291px;
   }
 
   .details__text {
+    margin-bottom: 45px;
     padding: 0 55px 0 80px;
   }
 
   .details__button {
     width: 230px;
-    margin: 0 55px 0 80px;
+    margin: 0 55px 60px 80px;
   }
 }
