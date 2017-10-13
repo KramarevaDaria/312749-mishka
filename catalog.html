@@ -246,15 +246,18 @@
         <p class="modal__text">Выберите размер:</p>
         <form class="modal__filter" action="https://echo.htmlacademy.ru" method="get">
           <label class="modal__label">
-            <input class="modal__item modal__item--s" type="radio" name="size" value="small">
+            <input class="modal__item modal__item--s visually-hidden" type="radio" name="size" value="small">
+            <span class="modal__indicator modal__indicator--s"></span>
             S
           </label>
           <label class="modal__label">
-            <input class="modal__item modal__item--m" type="radio" name="size" value="medium">
+            <input class="modal__item modal__item--m visually-hidden" type="radio" name="size" value="medium">
+            <span class="modal__indicator modal__indicator--m"></span>
             M
           </label>
           <label class="modal__label">
-            <input class="modal__item modal__item--l" type="radio" name="size" value="large">
+            <input class="modal__item modal__item--l visually-hidden" type="radio" name="size" value="large">
+            <span class="modal__indicator modal__indicator--l"></span>
             L
           </label>
           <button class="modal__button button" type="button">Добавить</button>

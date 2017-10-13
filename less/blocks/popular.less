@@ -1,6 +1,19 @@
 .popular {
-  padding: 0 30px;
-  margin-bottom: 35px;
+  position: relative;
+  padding: 0 30px 35px;
+}
+
+.popular::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  width: 320px;
+  height: 7px;
+  background-image: url("../img/bg-zigzag-line.svg");
+  background-repeat: repeat-x;
+  background-position: -7px 0;
+  background-size: cover;
 }
 
 .popular__title {
@@ -69,7 +82,12 @@
 
 @media (min-width: @tablet-width) {
   .popular {
-    padding: 0 50px;
+    padding: 0 50px 50px;
+  }
+
+  .popular::after {
+    width: 768px;
+    height: 17px;
   }
 
   .popular__header {
