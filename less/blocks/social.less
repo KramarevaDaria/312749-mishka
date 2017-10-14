@@ -4,11 +4,32 @@
 
 .social__list {
   display: flex;
-  margin: 0;
+  justify-content: space-between;
+  align-items: center;
+  width: 142px;
+  margin: 0 auto;
   padding: 0;
   list-style: none;
 }
 
+.social__item--instagram {
+  width: 22px;
+}
+
+.social__item--facebook {
+  width: 15px;
+}
+
+.social__item--twitter {
+  width: 24px;
+}
+
 .social__link {
   flex-basis: 25px;
+}
+
+@media (min-width: @tablet-width) {
+  .social__list {
+    margin: 0;
+  }
 }

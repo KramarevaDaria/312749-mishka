@@ -7,6 +7,7 @@
   box-sizing: border-box;
   border-bottom: 1px solid #c7c7c7;
   border-top: 1px solid #c7c7c7;
+  box-shadow: 0px 5px 10px 0px rgba(0, 1, 1, 0.25);
 }
 
 .modal__title {
@@ -28,21 +29,53 @@
 
 .modal__filter {
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
   width: 260px;
 }
 
 .modal__label {
+  position: relative;
   width: 82px;
+  padding-top: 17px;
   font-size: 17px;
   font-weight: bold;
   line-height: 17px;
   color: #444444;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.modal__label input[type="radio"] +
+.modal__indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 78px;
+  height: 52px;
+  border: 2px solid #ececec;
+}
+
+.modal__label input[type="radio"]:hover +
+.modal__indicator {
+  border-color: #c7c7c7;
+}
+
+.modal__label input[type="radio"]:focus +
+.modal__indicator {
+  border-color: #c7c7c7;
+}
+
+.modal__label input[type="radio"]:focus +
+.modal__indicator {
+  border-color: #62d1ba;
 }
 
 .modal__button {
   width: 260px;
-  margin: 30px 0 45px;
+  margin: 50px 0 45px;
   font-size: 17px;
   line-height: 17px;
   color: #ffffff;
@@ -69,11 +102,16 @@
   }
 
   .modal__filter {
-    width: 356px;
+    width: 350px;
   }
 
   .modal__label {
     width: 112px;
+  }
+
+  .modal__label input[type="radio"] +
+  .modal__indicator {
+    width: 108px;
   }
 
   .modal__button {
