@@ -1,4 +1,5 @@
 .filters__title {
+  position: relative;
   margin: 0;
   padding: 75px 30px;
   font-size: 27px;
@@ -26,6 +27,18 @@
     padding: 90px 50px 80px;
     font-size: 43px;
     line-height: 50px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 768px;
+      height: 24px;
+      background-image: url("../img/bg-zigzag-fill.svg");
+      background-repeat: repeat-x;
+      background-size: 768px 24px;
+    }
   }
 
   .filters__text {
@@ -45,6 +58,13 @@
     padding: 95px 50px;
     font-size: 53px;
     line-height: 57px;
+
+    &::after {
+      bottom: -20px;
+      width: 1150px;
+      height: 34px;
+      background-size: 1150px 34px;
+    }
   }
 
   .filters__text {

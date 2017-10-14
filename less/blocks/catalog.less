@@ -74,10 +74,23 @@
 
 @media (min-width: @tablet-width) {
   .catalog__title-main {
+    position: relative;
     margin-bottom: 80px;
     padding: 100px 50px 80px;
     font-size: 43px;
     line-height: 50px;
+  }
+
+  .catalog__title-main::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 768px;
+    height: 24px;
+    background-image: url("../img/bg-zigzag-fill.svg");
+    background-repeat: repeat-x;
+    background-size: 768px 24px;
   }
 
   .catalog__list {
@@ -85,7 +98,7 @@
     padding: 0 50px;
   }
 
-  .catalog__item {
+  5atalog__item {
     display: flex;
     width: 668px;
     margin-bottom: 55px;
@@ -131,6 +144,12 @@
     padding: 100px 50px 100px;
     font-size: 53px;
     line-height: 57px;
+  }
+
+  .catalog__title-main::after {
+    width: 1150px;
+    height: 34px;
+    background-size: cover;
   }
 
   .catalog__list {
