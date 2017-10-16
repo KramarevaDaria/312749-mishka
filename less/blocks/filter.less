@@ -4,6 +4,7 @@
 }
 
 .filter__wrapper {
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 260px;
@@ -71,7 +72,6 @@
 .filter__label--type {
   position: relative;
   padding: 10px 0 15px 60px;
-  // margin-bottom: 5px;
 }
 
 .filter__label--type input[type="radio"] +
@@ -106,12 +106,16 @@
   background-color: #62d1ba;
 }
 
+.filter__label--type input[type="radio"]:disabled +
+.radio-indicator {
+  opacity: 0.3;
+  box-shadow:0 0 0 2px #c7c7c7;
+}
+
 .filter__label--color {
   position: relative;
   margin-bottom: 20px;
-  // padding-top: 10px;
-  // padding-left: 60px;
-  padding: 10px 0 10px 60px;
+  padding: 10px 0 15px 60px;
 }
 
 .filter__label--color:last-child {
@@ -150,12 +154,24 @@
   background-position: center;
 }
 
+.filter__label--color input[type="checkbox"]:disabled +
+.checkbox-indicator {
+  opacity: 0.3;
+  border-color: #c7c7c7;
+}
+
 .filter__input--name {
   width: 100%;
   margin-bottom: 25px;
   padding: 15px 0;
   border: none;
   border-bottom: 2px solid #000000;
+
+  &:hover,
+  &:focus,
+  &:active {
+    border-color: #62d1ba;
+  }
 }
 
 .filter__input--tel,
@@ -164,24 +180,44 @@
   padding: 15px 45px 15px 0;
   border: none;
   border-bottom: 2px solid #000000;
+
+  &:hover,
+  &:focus,
+  &:active {
+    border-color: #62d1ba;
+  }
 }
 
-.filter__input--tel {
-  background-image: url("../img/icon-phone.svg");
-  background-repeat: no-repeat;
-  background-position: 227px 10px;
+.filter__icon--tel {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  width: 24px;
+  height: 25px;
+  fill: #c6c6c6;
 }
 
-.filter__input--email {
-  background-image: url("../img/icon-mail.svg");
-  background-repeat: no-repeat;
-  background-position: 224px 10px;
+.filter__icon--email {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  width: 32px;
+  height: 21px;
+  fill: #c6c6c6;
 }
 
 .filter__wishes {
-  width: 252px;
+  width: 260px;
   margin-bottom: 20px;
+  padding: 10px 15px;
   border: 2px solid #444444;
+  box-sizing: border-box;
+
+  &:hover,
+  &:focus,
+  &:active {
+    border-color: #62d1ba;
+  }
 }
 
 .filter__text {
@@ -198,6 +234,23 @@
   margin-bottom: 55px;
   font-size: 17px;
   line-height: 17px;
+  cursor: pointer;
+}
+
+::-webkit-input-placeholder {
+  color: #c6c6c6;
+}
+
+:-moz-placeholder {
+  color: #c6c6c6;
+}
+
+::-moz-placeholder {
+  color: #c6c6c6;
+}
+
+:-ms-input-placeholder {
+  color: #c6c6c6;
 }
 
 @media (min-width: @tablet-width) {
@@ -221,6 +274,7 @@
 
   .filter__wrapper--highlight {
     padding-top: 70px;
+    padding-bottom: 25px;
     background-color: #f1f1f1;
   }
 
@@ -268,7 +322,6 @@
   .filter__item--color {
     width: 240px;
     margin: 0;
-    margin-bottom: 55px;
     padding: 0;
   }
 
@@ -289,6 +342,7 @@
   }
 
   .filter__label--color {
+    margin-bottom: 25px;
     padding-left: 80px;
   }
 
@@ -308,7 +362,6 @@
     padding: 0;
     padding-bottom: 15px;
     background-color: #f1f1f1;
-    background-position: 450px 0;
   }
 
   .filter__input--email {
@@ -318,9 +371,17 @@
     padding: 0;
     padding-bottom: 15px;
     background-color: #f1f1f1;
-    background-position: 447px 0;
   }
 
+  .filter__icon--tel {
+    top: 70px;
+    right: 50px;
+  }
+
+  .filter__icon--email {
+    top: 0;
+    right: 50px;
+  }
 
   .filter__wishes {
     width: 501px;
@@ -361,7 +422,7 @@
   }
 
   .filter__legend {
-    width: 175px;
+    width: 115px;
     padding-left: 60px;
   }
 
@@ -392,12 +453,18 @@
 
   .filter__input--tel {
     width: 700px;
-    background-position: 667px 0;
   }
 
   .filter__input--email {
     width: 700px;
-    background-position: 664px -5px;
+  }
+
+  .filter__icon--tel {
+    right: 225px;
+  }
+
+  .filter__icon--email {
+    right: 225px;
   }
 
   .filter__wishes {

@@ -11,13 +11,37 @@
   padding: 24px 0;
 }
 
+.page-footer__icon--mishka {
+  &:hover {
+    fill: #46c1ae;
+  }
+
+  &:focus {
+    fill: #46c1ae;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
 .page-footer__copyright {
+  width: 183px;
+  padding: 15px 0 20px;
+  margin: 0 auto;
+}
+
+.page-footer__link--htmlacademy {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 183px;
-  margin: 0 auto;
-  padding: 24px 0;
+  margin: 0;
+  color: #000000;
+  text-decoration: none;
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .page-footer__text {
@@ -33,12 +57,16 @@
   width: 27px;
 }
 
-.page-footer__icon {
-  display: inline-block;
-  width: 27px;
-  height: 34px;
-  background-image: url("../img/logo-htmlacademy.svg");
-  background-repeat: no-repeat;
+.page-footer__icon--htmlacademy {
+  fill: #63d1bb;
+
+  &:hover {
+    fill: #46c1ae;
+  }
+
+  &:focus {
+    fill: #46c1ae;
+  }
 }
 
 @media (min-width: @tablet-width) {

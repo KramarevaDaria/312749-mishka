@@ -30,12 +30,15 @@
 
 .site-list__item--search,
 .site-list__item--basket {
-  display: none;
   position: relative;
+  display: none;
 }
 
 .site-list__item--container {
   position: relative;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
   width: 320px;
   font-size: 17px;
   font-weight: bold;
@@ -43,17 +46,11 @@
   padding: 0 30px;
 }
 
-.site-list__item--container {
-  display: flex;
-  align-items: center;
-  box-sizing: border-box;
-}
-
 .site-list__logo {
   flex-grow: 2;
   width: 86px;
   margin-right: 65px;
-  padding: 22px 0;
+  padding: 20px 0 17px;
   text-align: right;
   color: #000000;
   text-decoration: none;
@@ -72,10 +69,33 @@
   cursor: pointer;
 }
 
+.site-list__icon {
+  fill: #d3d2d2;
+}
+
+.site-list__link:hover,
+.site-list__link:focus {
+  opacity: 0.6;
+
+  .site-list__icon {
+    fill: #63d1bb;
+  }
+}
+
+.site-list__link:active {
+  opacity: 0.3;
+}
+
+.site-list__link--delivery:hover,
+.site-list__link--delivery:focus,
+.site-list__link--delivery:active {
+  opacity: 1;
+}
+
 .site-list__icon--basket {
   position: absolute;
   left: 30px;
-  top: 25px;
+  top: 30px;
   width: 21px;
   height: 18px;
 }
@@ -83,13 +103,9 @@
 .site-list__icon--search {
   position: absolute;
   left: 30px;
-  top: 25px;
+  top: 30px;
   width: 18px;
   height: 19px;
-}
-
-.site-list__item--delivery {
-  display: none;
 }
 
 @media (min-width: @tablet-width) {
@@ -109,7 +125,7 @@
   .site-list__item--container {
     order: -3;
     width: 113px;
-    margin-right: 209px;
+    margin-right: 207px;
     padding: 20px 0;
   }
 
@@ -133,7 +149,8 @@
     display: block;
     order: -2;
     width: 18px;
-    padding: 30px;
+    padding: 35px 32px 30px;
+    // padding-top: 35px;
     border-left: 1px solid #ececec;
   }
 
@@ -174,7 +191,6 @@
     display: block;
     z-index: 5;
     width: 140px;
-    // margin-right: 135px;
     padding-top: 20px;
     padding-left: 30px;
     font-size: 15px;
@@ -204,7 +220,7 @@
     order: -1;
     width: 149px;
     margin: 0;
-    margin-left: 75px;
+    margin-left: 70px;
     margin-right: 100px;
     padding: 0;
   }
