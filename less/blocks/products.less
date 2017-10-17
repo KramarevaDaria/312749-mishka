@@ -6,7 +6,7 @@
 
   @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
     background-image: url("../img/hero-mobile@2x.jpg");
-    background-size: 575px 373px;;
+    background-size: 575px 373px;
   }
 }
 
@@ -32,12 +32,34 @@
   font-size: 19px;
   font-weight: bold;
   line-height: 24px;
+  //
+  // &:hover {
+  //   padding-top: 30px;
+  // }
+  //
+  // &:focus {
+  //   padding-top: 30px;
+  // }
 }
 
 .products__link--interior {
   color: #ffffff;
   background-color: #63d1bb;
   text-decoration: none;
+
+  &:active {
+    color: #97e2d2;
+    background-color: #59d5bc;
+  }
+}
+
+.products__link--interior:hover .products__icon--interior,
+.products__link--interior:focus .products__icon--interior {
+  opacity: 0.7;
+}
+
+.products__link--interior:active .products__icon--interior {
+  opacity: 0.3;
 }
 
 .products__link--interior span {
@@ -54,6 +76,23 @@
   color: #ffffff;
   background-color: #56c3b2;
   text-decoration: none;
+
+  &:active {
+    color: #8dd5c9;
+    background-color: #46c1ae;
+  }
+}
+
+.products__link--toys:hover
+.products__icon--toys,
+.products__link--toys:focus
+.products__icon--toys {
+  opacity: 0.7;
+}
+
+.products__link--toys:active
+.products__icon--toys {
+  opacity: 0.3;
 }
 
 .products__link--toys span {
@@ -69,7 +108,6 @@
 @media (min-width: @tablet-width) {
   .products {
     position: relative;
-    z-index: -1;
     background-image: url("../img/hero-tablet@1x.jpg");
     background-position: center -5px;
 
@@ -92,7 +130,7 @@
   }
 
   .products__title {
-    padding: 150px 50px 370px;
+    padding: 150px 50px 375px;
     font-size: 43px;
     line-height: 50px;
   }
@@ -108,9 +146,13 @@
   }
 
   .products__link {
-    padding: 30px 184px 30px 35px;
+    padding: 30px 184px 35px 35px;
     font-size: 20px;
     line-height: 30px;
+
+    &:hover {
+      padding-bottom: 40px;
+    }
   }
 
   .products__link--interior span {
@@ -145,7 +187,7 @@
   }
 
   .products__title {
-    padding: 150px 50px 355px;
+    padding: 150px 50px 360px;
     font-size: 53px;
     line-height: 56px;
   }
