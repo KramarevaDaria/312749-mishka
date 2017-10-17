@@ -12,21 +12,21 @@
   height: 7px;
   background-image: url("../img/bg-zigzag-line.svg");
   background-repeat: repeat-x;
-  background-position: -7px 0;
+  background-position: 0 0;
   background-size: contain;
 }
 
 .popular__title {
   margin: 0;
   margin-bottom: 5px;
-  padding-top: 30px;
+  padding-top: 25px;
   font-size: 25px;
   line-height: 30px;
 }
 
 .popular__ad {
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   color: #63d1bb;
   font-weight: bold;
   text-transform: uppercase;
@@ -34,7 +34,7 @@
 
 .popular__text {
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 17px;
   font-size: 15px;
   line-height: 24px;
   color: #444444;
@@ -56,18 +56,19 @@
 
 .popular__value {
   padding: 10px 0;
+  padding-left: 15px;
   border-bottom: 1px solid #ececec;
 }
 
 .popular__image-wrapper {
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   padding:0;
 }
 
 .popular__price {
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   font-weight: bold;
   line-height: 24px;
   text-align: center;
@@ -97,7 +98,7 @@
 
 @media (min-width: @tablet-width) {
   .popular {
-    padding: 0 50px 65px;
+    padding: 0 50px 70px;
   }
 
   .popular::after {
@@ -107,14 +108,14 @@
 
   .popular__header {
     display: flex;
-    margin-bottom: 45px;
+    margin-bottom: 50px;
   }
 
   .popular__title {
     flex-basis: 540px;
     margin: 0;
     padding: 0;
-    padding-top: 45px;
+    padding-top: 40px;
     text-align: left;
     font-size: 43px;
     line-height: 50px;
@@ -123,7 +124,7 @@
   .popular__ad {
     flex-basis: 128px;
     margin: 0;
-    padding-top: 60px;
+    padding-top: 50px;
     text-align: center;
     line-height: 17px;
   }
@@ -131,6 +132,10 @@
   .popular__content {
     position: relative;
     padding-right: 370px;
+  }
+
+  .popular__value {
+    padding-left: 10px;
   }
 
   .popular__image-wrapper {
@@ -142,7 +147,7 @@
 
   .popular__text {
     width: 290px;
-    margin-bottom: 35px;
+    margin-bottom: 30px;
     font-size: 17px;
     line-height: 30px;
   }
@@ -167,7 +172,7 @@
 @media (min-width: @desktop-width) {
   .popular {
     position: relative;
-    padding-bottom: 90px;
+    padding-bottom: 95px;
   }
 
   .popular::after {
@@ -186,9 +191,7 @@
     z-index: 100;
     flex-basis: 870px;
     margin: 0;
-    padding: 0;
-    padding-top: 125px;
-    padding-right: 50px;
+    padding: 120px 50px 0 0;
     font-size: 53px;
     line-height: 57px;
     text-align: left;
@@ -199,7 +202,7 @@
     order: -1;
     margin: 0;
     padding: 0 50px;
-    padding-top: 140px;
+    padding-top: 135px;
     line-height: 17px;
   }
 
@@ -207,6 +210,14 @@
     position: static;
     margin-left: 175px;
     padding-right: 580px;
+  }
+
+  .popular__text {
+    margin-bottom: 45px;
+  }
+
+  .popular__price {
+    margin-bottom: 40px;
   }
 
   .popular__image-wrapper {

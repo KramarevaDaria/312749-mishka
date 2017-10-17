@@ -1,6 +1,6 @@
 .reviews {
   position: relative;
-  padding-bottom: 45px;
+  padding-bottom: 50px;
 }
 
 .reviews::after {
@@ -12,7 +12,7 @@
   height: 7px;
   background-image: url("../img/bg-zigzag-line.svg");
   background-repeat: repeat-x;
-  background-position: -10px 0;
+  background-position: 0 0;
   background-size: contain;
 }
 
@@ -22,14 +22,14 @@
 
 .reviews__title {
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   font-size: 25px;
   line-height: 30px;
 }
 
 .reviews__item {
   margin: 0;
-  margin-bottom: 35px;
+  margin-bottom: 25px;
   padding: 0;
   font-size: 15px;
   line-height: 30px;
@@ -37,26 +37,28 @@
 }
 
 .reviews__signature {
-  margin-bottom: 35px;
+  margin-bottom: 30px;
 }
 
 .reviews__author {
   margin: 0;
   font-size: 17px;
   font-weight: bold;
+  font-style: normal;
   line-height: 30px;
 }
 
 .reviews__nickname {
   margin: 0;
   font-size: 17px;
+  font-style: normal;
   line-height: 30px;
   color: #444444;
 }
 
 .reviews__buttons {
   display: flex;
-  margin-bottom: 40px;
+  margin-bottom: 35px;
 }
 
 .reviews__arrow {
@@ -131,7 +133,7 @@
 
   .reviews__title {
     flex-basis: 180px;
-    margin-bottom: 60px;
+    margin-bottom: 50px;
     padding-top: 85px;
     font-size: 43px;
     line-height: 50px;
@@ -140,7 +142,7 @@
   .reviews__write {
     flex-basis: 175px;
     order: 1;
-    padding-top: 80px;
+    padding-top: 85px;
   }
 
   .reviews__list {
@@ -170,6 +172,7 @@
     flex-basis: 167px;
     order: 3;
     margin-bottom: 55px;
+    padding-top: 10px;
   }
 
   .reviews__arrow {
@@ -185,7 +188,7 @@
 
 @media (min-width: @desktop-width) {
   .reviews {
-    padding: 0 50px 70px;
+    padding: 0 50px 90px;
   }
 
   .reviews::after {
@@ -203,7 +206,11 @@
   .reviews__title {
     font-size: 53px;
     line-height: 57px;
-    padding-top: 80px;
+    padding-top: 85px;
+  }
+
+  .reviews__write {
+    padding-top: 90px;
   }
 
   .reviews__list {
@@ -212,6 +219,7 @@
 
   .reviews__item {
     flex-basis: 780px;
+    margin-bottom: 30px;
   }
 
   .reviews__signature {
