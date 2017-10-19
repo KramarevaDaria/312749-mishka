@@ -44,6 +44,14 @@
   }
 }
 
+.page-footer__link--htmlacademy:hover .page-footer__icon--htmlacademy {
+    fill: #46c1ae;
+}
+
+.page-footer__link--htmlacademy:focus .page-footer__icon--htmlacademy {
+    fill: #46c1ae;
+}
+
 .page-footer__text {
   width: 127px;
   margin: 0;
@@ -51,6 +59,10 @@
   font-size: 19px;
   font-weight: bold;
   line-height: 19px;
+  //
+  // &:active {
+  //   opacity: 0.3;
+  // }
 }
 
 .page-footer__logo {
@@ -59,14 +71,6 @@
 
 .page-footer__icon--htmlacademy {
   fill: #63d1bb;
-
-  &:hover {
-    fill: #46c1ae;
-  }
-
-  &:focus {
-    fill: #46c1ae;
-  }
 }
 
 @media (min-width: @tablet-width) {
