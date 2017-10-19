@@ -14,17 +14,22 @@ navToggle.addEventListener('click', function() {
 });
 
 var button = document.querySelector('.popular__button');
-var popup = document.querySelector('.modal');
+var popup = document.querySelector('.modal-overlay');
+// var container = document.querySelector('.container');
 
 button.addEventListener('click', function(evt) {
-	evt.preventDefolt();
-	popup.classList.add('modal--show');
+  evt.preventDefault();
+  if (popup.classList.contains('modal--show')) {
+      popup.classList.remove('modal--show');
+  } else {
+      popup.classList.add('modal--show');
+  }
 });
 
 window.addEventListener('keydown', function (evt) {
   if (evt.keyCode === 27) {
-    if (popup.classList.contains('modal-show')) {
-      mapPopup.classList.remove('modal-show');
+    if (popup.classList.contains('modal--show')) {
+      popup.classList.remove('modal--show');
     }
   }
 });
