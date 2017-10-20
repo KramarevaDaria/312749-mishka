@@ -38,7 +38,7 @@
 }
 
 .filter__legend--ad {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 .filter__list {
@@ -50,15 +50,17 @@
 }
 
 .filter__list--type {
-  padding: 30px 0 40px;
+  padding: 30px 0 30px;
 }
 
 .filter__list--color {
-  padding-top: 30px;
+  padding-top: 25px;
+  padding-bottom: 10px;
 }
 
 .filter__list--name {
   padding-top: 30px;
+  padding-bottom: 10px;
 }
 
 .filter__label {
@@ -71,7 +73,7 @@
 
 .filter__label--type {
   position: relative;
-  padding: 10px 0 15px 60px;
+  padding: 5px 0 15px 60px;
 }
 
 .filter__label--type input[type="radio"] +
@@ -79,11 +81,14 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 20px;
-  height: 20px;
-  border: 12px solid #ffffff;
+  width: 15px;
+  height: 15px;
+  border: 10px solid #ffffff;
   border-radius: 50%;
   box-shadow: 0 0 0 2px #444444;
+  // border: 12px solid #ffffff;
+  // border-radius: 50%;
+  // box-shadow: 0 0 0 2px #444444;
 }
 
 .filter__label--type input[type="radio"]:hover +
@@ -114,22 +119,26 @@
 
 .filter__label--color {
   position: relative;
+  margin: 0;
   margin-bottom: 20px;
-  padding: 10px 0 15px 60px;
+  padding: 10px 0 13px 60px;
 }
 
-.filter__label--color:last-child {
-  margin-bottom: 30px;
-}
+// .filter__label--color:last-child {
+//   margin-bottom: 30px;
+// }
 
 .filter__label--color input[type="checkbox"] +
 .checkbox-indicator {
   position: absolute;
   top: 0;
   left: 0;
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
   border: 2px solid #444444;
+  // width: 40px;
+  // height: 40px;
+  // border: 2px solid #444444;
 }
 
 .filter__label--color input[type="checkbox"]:focus +
@@ -152,6 +161,7 @@
   background-image: url("../img/icon-tick.svg");
   background-repeat: no-repeat;
   background-position: center;
+  background-size: 25px 25px;
 }
 
 .filter__label--color input[type="checkbox"]:disabled +
@@ -162,7 +172,7 @@
 
 .filter__input--name {
   width: 100%;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   padding: 15px 0;
   border: none;
   border-bottom: 2px solid #000000;
@@ -176,8 +186,8 @@
 
 .filter__input--tel,
 .filter__input--email {
-  margin-bottom: 35px;
-  padding: 15px 45px 15px 0;
+  margin-bottom: 32px;
+  padding: 22px 45px 15px 0;
   border: none;
   border-bottom: 2px solid #000000;
 
@@ -190,28 +200,41 @@
 
 .filter__icon--tel {
   position: absolute;
-  top: 30px;
-  right: 0;
+  top: 35px;
+  right: 10px;
   width: 24px;
   height: 25px;
   fill: #c6c6c6;
 }
 
+.filter__input--tel:hover + .filter__icon--tel,
+.filter__input--tel:focus + .filter__icon--tel,
+.filter__input--tel:active + .filter__icon--tel {
+  fill: #62d1ba;
+}
+
 .filter__icon--email {
   position: absolute;
-  top: 30px;
-  right: 0;
+  top: 40px;
+  right: 8px;
   width: 32px;
   height: 21px;
-  fill: #c6c6c6;
+  fill: #c6c6c6
+}
+
+.filter__input--email:hover + .filter__icon--email,
+.filter__input--email:focus + .filter__icon--email,
+.filter__input--email:active + .filter__icon--email {
+  fill: #62d1ba;
 }
 
 .filter__wishes {
   width: 260px;
-  margin-bottom: 20px;
-  padding: 10px 15px;
+  margin-bottom: 15px;
+  padding: 15px 15px 10px;
   border: 2px solid #444444;
   box-sizing: border-box;
+  resize: none;
 
   &:hover,
   &:focus,
@@ -231,7 +254,8 @@
 
 .filter__button {
   width: 260px;
-  margin-bottom: 55px;
+  margin-bottom: 60px;
+  padding: 15px;
   font-size: 17px;
   line-height: 17px;
   cursor: pointer;
@@ -269,11 +293,11 @@
   }
 
   .filter__wrapper--type {
-    margin-bottom: 65px;
+    margin-bottom: 20px;
   }
 
   .filter__wrapper--highlight {
-    padding-top: 70px;
+    padding-top: 50px;
     padding-bottom: 25px;
     background-color: #f1f1f1;
   }
@@ -315,8 +339,8 @@
     padding: 0;
   }
 
-  .filter__item--type:first-child {
-    margin-bottom: 40px;
+  .filter__item--type {
+    margin-bottom: 30px;
   }
 
   .filter__item--color {
@@ -331,6 +355,10 @@
     margin-bottom: 40px;
   }
 
+  .filter__item--name:last-child {
+    margin-bottom: 50px;
+  }
+
   .filter__label {
     width: auto;
     font-size: 19px;
@@ -338,12 +366,30 @@
   }
 
   .filter__label--type {
-    padding-left: 80px;
+    padding: 15px 0 15px 80px;
+  }
+
+  .filter__label--type input[type="radio"] +
+  .radio-indicator {
+    width: 22px;
+    height: 22px;
+    border: 12px solid #ffffff;
   }
 
   .filter__label--color {
     margin-bottom: 25px;
-    padding-left: 80px;
+    padding: 15px 0 15px 80px;
+  }
+
+  .filter__label--color input[type="checkbox"] +
+  .checkbox-indicator {
+    width: 50px;
+    height: 50px;
+  }
+
+  .filter__label--color input[type="checkbox"]:checked +
+  .checkbox-indicator {
+    background-size: 30px 30px;
   }
 
   .filter__label--name {
@@ -359,6 +405,7 @@
 
   .filter__input--tel {
     width: 501px;
+    margin-bottom: 35px;
     padding: 0;
     padding-bottom: 15px;
     background-color: #f1f1f1;
@@ -374,13 +421,13 @@
   }
 
   .filter__icon--tel {
-    top: 70px;
-    right: 50px;
+    top: 60px;
+    right: 80px;
   }
 
   .filter__icon--email {
     top: 0;
-    right: 50px;
+    right: 75px;
   }
 
   .filter__wishes {
