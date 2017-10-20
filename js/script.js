@@ -14,8 +14,11 @@ navToggle.addEventListener('click', function() {
 });
 
 var button = document.querySelector('.popular__button');
-var popup = document.querySelector('.modal-overlay');
-// var container = document.querySelector('.container');
+var popup = document.querySelector('.modal__overlay');
+var hairButton = document.querySelector('.catalog__button--hair');
+var cartButton = document.querySelector('.catalog__button--cart');
+var bigButton = document.querySelector('.catalog__button--bigcart');
+// var catalogBtn = document.querySelectorAll('.catalog__button');
 
 button.addEventListener('click', function(evt) {
   evt.preventDefault();
@@ -33,3 +36,47 @@ window.addEventListener('keydown', function (evt) {
     }
   }
 });
+
+hairButton.addEventListener('click', function(evt) {
+  evt.preventDefault();
+  if (popup.classList.contains('modal--show')) {
+      popup.classList.remove('modal--show');
+  } else {
+      popup.classList.add('modal--show');
+  }
+});
+
+cartButton.addEventListener('click', function(evt) {
+  evt.preventDefault();
+  if (popup.classList.contains('modal--show')) {
+      popup.classList.remove('modal--show');
+  } else {
+      popup.classList.add('modal--show');
+  }
+});
+
+bigButton.addEventListener('click', function(evt) {
+  evt.preventDefault();
+  if (popup.classList.contains('modal--show')) {
+      popup.classList.remove('modal--show');
+  } else {
+      popup.classList.add('modal--show');
+  }
+});
+
+window.addEventListener('keydown', function (evt) {
+  if (evt.keyCode === 27) {
+    if (popup.classList.contains('modal--show')) {
+      popup.classList.remove('modal--show');
+    }
+  }
+});
+
+// catalogBtn.addEventListener('click', function(evt) {
+//   evt.preventDefault();
+//   if (popup.classList.contains('modal--show')) {
+//       popup.classList.remove('modal--show');
+//   } else {
+//       popup.classList.add('modal--show');
+//   }
+// });

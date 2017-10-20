@@ -22,7 +22,7 @@
                   <picture>
                     <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
                     <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-                    <img src="img/logo-mobile.svg" width="86" height="35" alt="Логотип магазина Мишка">
+                    <img src="img/logo-mobile.svg" alt="Логотип магазина Мишка">
                   </picture>
                 </a>
               </li>
@@ -79,7 +79,7 @@
                 </div>
                 <div class="catalog__column-price">
                   <p class="catalog__price">1 200 руб.</p>
-                  <button class="catalog__button" type="button">
+                  <button class="catalog__button catalog__button--hair" type="button">
                     <span class="visually-hidden">Купить</span>
                     <svg class="catalog__icon" width="21" height="19"><use xlink:href="img/sprite.svg#icon-cart"></use></svg>
                   </button>
@@ -104,7 +104,7 @@
                 </div>
                 <div class="catalog__column-price">
                   <p class="catalog__price">690 руб.</p>
-                  <button class="catalog__button" type="button">
+                  <button class="catalog__button catalog__button--cart" type="button">
                     <span class="visually-hidden">Купить</span>
                     <svg class="catalog__icon" width="21" height="19"><use xlink:href="img/sprite.svg#icon-cart"></use></svg>
                   </button>
@@ -129,7 +129,7 @@
                 </div>
                 <div class="catalog__column-price">
                   <p class="catalog__price">1 500 руб.</p>
-                  <button class="catalog__button" type="button">
+                  <button class="catalog__button catalog__button--bigcart" type="button">
                     <span class="visually-hidden">Купить</span>
                     <svg class="catalog__icon" width="21" height="19"><use xlink:href="img/sprite.svg#icon-cart"></use></svg>
                   </button>
@@ -151,7 +151,7 @@
                 <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x">
                 <img class="details__image" src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x" alt="Вязаная корзинка">
               </picture>
-              <button class="details__control" type="button">
+              <button class="details__control popular__button" type="button">
                 <span class="visually-hidden">Включить воспроизведение</span>
                 <svg class="details__icon-play" width="102" height="78"><use xlink:href="img/sprite.svg#icon-play"></use></svg>
               </button>
@@ -198,28 +198,30 @@
         </div>
       </footer>
     </div>
-    <section class="modal">
-      <h2 class="modal__title">Добавить в корзину</h2>
-      <p class="modal__text">Выберите размер:</p>
-      <form class="modal__filter" action="https://echo.htmlacademy.ru" method="get">
-        <label class="modal__label">
-          <input class="modal__item modal__item--s visually-hidden" type="radio" name="size" value="small" checked>
-          <span class="modal__indicator modal__indicator--s"></span>
-          S
-        </label>
-        <label class="modal__label">
-          <input class="modal__item modal__item--m visually-hidden" type="radio" name="size" value="medium">
-          <span class="modal__indicator modal__indicator--m"></span>
-          M
-        </label>
-        <label class="modal__label">
-          <input class="modal__item modal__item--l visually-hidden" type="radio" name="size" value="large">
-          <span class="modal__indicator modal__indicator--l"></span>
-          L
-        </label>
-        <button class="modal__button button" type="button">Добавить</button>
-      </form>
-    </section>
+    <div class="modal modal__overlay">
+      <section class="modal__content">
+        <h2 class="modal__title">Добавить в корзину</h2>
+        <p class="modal__text">Выберите размер:</p>
+        <form class="modal__filter" action="https://echo.htmlacademy.ru" method="get">
+          <label class="modal__label">
+            <input class="modal__item modal__item--s visually-hidden" type="radio" name="size" value="small" checked>
+            <span class="modal__indicator modal__indicator--s"></span>
+            S
+          </label>
+          <label class="modal__label">
+            <input class="modal__item modal__item--m visually-hidden" type="radio" name="size" value="medium">
+            <span class="modal__indicator modal__indicator--m"></span>
+            M
+          </label>
+          <label class="modal__label">
+            <input class="modal__item modal__item--l visually-hidden" type="radio" name="size" value="large">
+            <span class="modal__indicator modal__indicator--l"></span>
+            L
+          </label>
+          <button class="modal__button button" type="button">Добавить</button>
+        </form>
+      </section>
+    </div>
     <script src="js/picturefill.min.js" async></script>
     <script type="text/javascript" src="js/svg4everybody.min.js"></script>
     <script>svg4everybody();</script>

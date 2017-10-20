@@ -5,8 +5,8 @@
   font-size: 27px;
   line-height: 30px;
   text-align: center;
-  background-color: #f1f1f1;
-  border-top: 1px solid #ececec;
+  background-color: @light-grey;
+  border-top: 1px solid @border-grey;
 }
 
 .catalog__list {
@@ -50,7 +50,7 @@
 
 .catalog__title a {
   text-decoration: none;
-  color: #000000;
+  color: @black;
 }
 
 .catalog__text {
@@ -58,7 +58,7 @@
   padding-bottom: 20px;
   font-size: 13px;
   line-height: 30px;
-  color: #444444;
+  color: @darkgrey;
 }
 
 .catalog__column-price {
@@ -66,7 +66,7 @@
   justify-content: space-between;
   width: 200px;
   padding-top: 20px;
-  border-top: 1px solid #ececec;
+  border-top: 1px solid @border-grey;
 }
 
 .catalog__price {
@@ -84,11 +84,11 @@
   border: none;
 
   &:hover .catalog__icon {
-    fill: #63d1bb;
+    fill: @green;
   }
 
   &:focus .catalog__icon {
-    fill: #63d1bb;
+    fill: @green;
   }
 
   &:active .catalog__icon {
@@ -104,7 +104,6 @@
   .catalog__title-main {
     position: relative;
     margin: 0;
-    // margin-bottom: 80px;
     padding: 95px 50px 85px;
     font-size: 43px;
     line-height: 50px;

@@ -19,7 +19,7 @@
   font-weight: bold;
   text-transform: uppercase;
   line-height: 17px;
-  color: #63d1bb;
+  color: @green;
 }
 
 .filter__legend::after {
@@ -29,7 +29,7 @@
   left: 62px;
   width: 198px;
   height: 1px;
-  background: #63d1bb;
+  background: @green;
 }
 
 .filter__legend--email::after {
@@ -83,38 +83,38 @@
   left: 0;
   width: 15px;
   height: 15px;
-  border: 10px solid #ffffff;
+  border: 10px solid @white;
   border-radius: 50%;
-  box-shadow: 0 0 0 2px #444444;
-  // border: 12px solid #ffffff;
+  box-shadow: 0 0 0 2px @darkgrey;
+  // border: 12px solid @white;
   // border-radius: 50%;
-  // box-shadow: 0 0 0 2px #444444;
+  // box-shadow: 0 0 0 2px @darkgrey;
 }
 
 .filter__label--type input[type="radio"]:hover +
 .radio-indicator {
-  box-shadow: 0 0 0 2px #62d1ba;
+  box-shadow: 0 0 0 2px @green;
 }
 
 .filter__label--type input[type="radio"]:focus +
 .radio-indicator {
-  box-shadow: 0 0 0 2px #62d1ba;
+  box-shadow: 0 0 0 2px @green;
 }
 
 .filter__label--type input[type="radio"]:active +
 .radio-indicator {
-  box-shadow: 0 0 0 2px #c7c7c7;
+  box-shadow: 0 0 0 2px @medium-grey;
 }
 
 .filter__label--type input[type="radio"]:checked +
 .radio-indicator {
-  background-color: #62d1ba;
+  background-color: @green;
 }
 
 .filter__label--type input[type="radio"]:disabled +
 .radio-indicator {
   opacity: 0.3;
-  box-shadow: 0 0 0 2px #c7c7c7;
+  box-shadow: 0 0 0 2px @medium-grey;
 }
 
 .filter__label--color {
@@ -135,25 +135,25 @@
   left: 0;
   width: 35px;
   height: 35px;
-  border: 2px solid #444444;
+  border: 2px solid @darkgrey;
   // width: 40px;
   // height: 40px;
-  // border: 2px solid #444444;
+  // border: 2px solid @darkgrey;
 }
 
 .filter__label--color input[type="checkbox"]:focus +
 .checkbox-indicator {
-  border-color: #62d1ba;
+  border-color: @green;
 }
 
 .filter__label--color input[type="checkbox"]:hover +
 .checkbox-indicator {
-  border-color: #62d1ba;
+  border-color: @green;
 }
 
 .filter__label--color input[type="checkbox"]:active +
 .checkbox-indicator {
-  border-color: #c7c7c7;
+  border-color: @medium-grey;
 }
 
 .filter__label--color input[type="checkbox"]:checked +
@@ -167,7 +167,7 @@
 .filter__label--color input[type="checkbox"]:disabled +
 .checkbox-indicator {
   opacity: 0.3;
-  border-color: #c7c7c7;
+  border-color: @medium-grey;
 }
 
 .filter__input--name {
@@ -175,12 +175,12 @@
   margin-bottom: 20px;
   padding: 15px 0;
   border: none;
-  border-bottom: 2px solid #000000;
+  border-bottom: 2px solid @black;
 
   &:hover,
   &:focus,
   &:active {
-    border-color: #62d1ba;
+    border-color: @green;
   }
 }
 
@@ -189,12 +189,12 @@
   margin-bottom: 32px;
   padding: 22px 45px 15px 0;
   border: none;
-  border-bottom: 2px solid #000000;
+  border-bottom: 2px solid @black;
 
   &:hover,
   &:focus,
   &:active {
-    border-color: #62d1ba;
+    border-color: @green;
   }
 }
 
@@ -204,13 +204,13 @@
   right: 10px;
   width: 24px;
   height: 25px;
-  fill: #c6c6c6;
+  fill: @medium-grey;
 }
 
 .filter__input--tel:hover + .filter__icon--tel,
 .filter__input--tel:focus + .filter__icon--tel,
 .filter__input--tel:active + .filter__icon--tel {
-  fill: #62d1ba;
+  fill: @green;
 }
 
 .filter__icon--email {
@@ -219,27 +219,27 @@
   right: 8px;
   width: 32px;
   height: 21px;
-  fill: #c6c6c6
+  fill: @medium-grey;
 }
 
 .filter__input--email:hover + .filter__icon--email,
 .filter__input--email:focus + .filter__icon--email,
 .filter__input--email:active + .filter__icon--email {
-  fill: #62d1ba;
+  fill: @green;
 }
 
 .filter__wishes {
   width: 260px;
   margin-bottom: 15px;
   padding: 15px 15px 10px;
-  border: 2px solid #444444;
+  border: 2px solid @darkgrey;
   box-sizing: border-box;
   resize: none;
 
   &:hover,
   &:focus,
   &:active {
-    border-color: #62d1ba;
+    border-color: @green;
   }
 }
 
@@ -249,7 +249,7 @@
   padding: 0;
   font-size: 14px;
   line-height: 16px;
-  color: #444444;
+  color: @darkgrey;
 }
 
 .filter__button {
@@ -262,19 +262,23 @@
 }
 
 ::-webkit-input-placeholder {
-  color: #c6c6c6;
+  font-family: "Open Sans", "Arial", sans-serif;
+  color: @medium-grey;
 }
 
 :-moz-placeholder {
-  color: #c6c6c6;
+  font-family: "Open Sans", "Arial", sans-serif;
+  color: @medium-grey;
 }
 
 ::-moz-placeholder {
-  color: #c6c6c6;
+  font-family: "Open Sans", "Arial", sans-serif;
+  color: @medium-grey;
 }
 
 :-ms-input-placeholder {
-  color: #c6c6c6;
+  font-family: "Open Sans", "Arial", sans-serif;
+  color: @medium-grey;
 }
 
 @media (min-width: @tablet-width) {
@@ -299,7 +303,7 @@
   .filter__wrapper--highlight {
     padding-top: 50px;
     padding-bottom: 25px;
-    background-color: #f1f1f1;
+    background-color: @light-grey;
   }
 
   .filter__wrapper--name {
@@ -308,14 +312,15 @@
 
   .filter__wrapper--tel {
     padding-top: 70px;
-    background-color: #f1f1f1;
+    background-color: @light-grey;
   }
 
   .filter__wrapper--email {
-    background-color: #f1f1f1;
+    background-color: @light-grey;
   }
 
   .filter__wrapper--ad {
+    margin-bottom: 55px;
     padding-top: 50px;
   }
 
@@ -323,12 +328,21 @@
     width: 167px;
   }
 
+  .filter__legend--type {
+    padding-top: 15px;
+  }
+
+  .filter__legend--color {
+    padding-top: 15px;
+  }
+
   .filter__legend::after {
     display: none;
   }
 
   .filter__legend--ad {
-    padding-top: 10px;
+    margin: 0;
+    padding-top: 15px;
   }
 
   .filter__list {
@@ -373,7 +387,7 @@
   .radio-indicator {
     width: 22px;
     height: 22px;
-    border: 12px solid #ffffff;
+    border: 12px solid @white;
   }
 
   .filter__label--color {
@@ -401,6 +415,7 @@
     margin: 0;
     padding: 0;
     padding-bottom: 15px;
+    text-indent: 15px;
   }
 
   .filter__input--tel {
@@ -408,7 +423,8 @@
     margin-bottom: 35px;
     padding: 0;
     padding-bottom: 15px;
-    background-color: #f1f1f1;
+    text-indent: 15px;
+    background-color: @light-grey;
   }
 
   .filter__input--email {
@@ -417,7 +433,8 @@
     margin-bottom: 50px;
     padding: 0;
     padding-bottom: 15px;
-    background-color: #f1f1f1;
+    text-indent: 15px;
+    background-color: @light-grey;
   }
 
   .filter__icon--tel {
@@ -432,13 +449,14 @@
 
   .filter__wishes {
     width: 501px;
-    margin-bottom: 50px;
-    padding-top: 10px;
+    margin: 0;
+    // margin-bottom: 50px;
+    padding-top: 15px;
   }
 
   .filter__text {
     order: 2;
-    flex-basis: 305px;
+    flex-basis: 302px;
     align-self: center;
     margin-bottom: 60px;
     margin-right: 50px;
@@ -451,7 +469,23 @@
     flex-basis: 230px;
     margin-bottom: 50px;
     margin-left: 50px;
-    padding: 20px 29px;
+    padding: 15px 29px;
+  }
+
+  ::-webkit-input-placeholder {
+    font-size: 19px;
+  }
+
+  :-moz-placeholder {
+    font-size: 19px;
+  }
+
+  ::-moz-placeholder {
+    font-size: 19px;
+  }
+
+  :-ms-input-placeholder {
+    font-size: 19px;
   }
 }
 
@@ -462,6 +496,10 @@
 
   .filter__wrapper {
     width: 1050px;
+  }
+
+  .filter__wrapper--type {
+    margin-bottom: 15px;
   }
 
   .filter__wrapper--highlight {
