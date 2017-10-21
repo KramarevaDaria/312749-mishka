@@ -40,7 +40,6 @@
 
 .site-list__logo {
   width: 86px;
-  // padding-top: 10px;
   text-align: center;
   color: @black;
   text-decoration: none;
@@ -51,43 +50,32 @@
   height: 35px;
 }
 
-// .site-list__logo[href]:hover {
-//   opacity: 0.6;
-// }
-//
-// .site-list__logo[href]:active {
-//   opacity: 0.3;
-// }
-
 .site-list__item--container:hover {
+  opacity: 0.6;
+}
+
+.site-list__item--container:focus {
   opacity: 0.6;
 }
 
 .site-list__item--container:active {
   opacity: 0.3;
 }
-//
-// .site-list__item--active:hover,
-// .site-list__item--active:active {
-//   opacity: 1;
-// }
-
-.site-list__logo img {
-  width: 86px;
-  height: 35px;
-}
 
 .site-list__icon {
   fill: #d3d2d2;
 }
 
-.site-list__link[href]:hover,
+.site-list__link[href]:hover {
+  opacity: 0.6;
+}
+
 .site-list__link[href]:focus {
   opacity: 0.6;
+}
 
-  .site-list__icon {
-    fill: @green;
-  }
+.site-list__icon {
+  fill: @green;
 }
 
 .site-list__link[href]:active {
@@ -153,7 +141,8 @@
     display: block;
     order: -2;
     width: 18px;
-    padding: 35px 32px 30px;
+    padding: 35px 32px 25px;
+    font-size: 0;
     border-left: 1px solid @border-grey;
   }
 
@@ -178,15 +167,11 @@
     position: static;
   }
 
-  .site-list__text {
-    display: none;
-  }
-
   .site-list__item--catalog {
     display: block;
     z-index: 5;
     width: 140px;
-    padding-top: 20px;
+    padding-top: 15px;
     font-size: 15px;
   }
 
@@ -194,7 +179,7 @@
     display: block;
     z-index: 5;
     width: 140px;
-    padding-top: 20px;
+    padding-top: 15px;
     padding-left: 30px;
     font-size: 15px;
   }
@@ -205,7 +190,7 @@
     z-index: 5;
     width: 235px;
     margin-left: auto;
-    padding-top: 20px;
+    padding-top: 15px;
     font-size: 15px;
     font-weight: normal;
     line-height: 24px;
@@ -231,22 +216,6 @@
     width: 149px;
     height: 72px;
   }
-
-  // .site-list__logo[href]:hover {
-  //   opacity: 0.6;
-  // }
-  //
-  // .site-list__logo[href]:active {
-  //   opacity: 0.3;
-  // }
-
-  // .site-list__item--container:hover {
-  //   opacity: 0.6;
-  // }
-  //
-  // .site-list__item--container:active {
-  //   opacity: 0.3;
-  // }
 
   .site-list__item--catalog {
     order: -3;
@@ -285,7 +254,6 @@
     z-index: 5;
     display: block;
     width: 100px;
-    // margin-right: 495px;
     padding-top: 15px;
     padding-left: 35px;
     font-size: 15px;

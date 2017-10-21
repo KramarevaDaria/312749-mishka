@@ -13,7 +13,6 @@
         <nav class="site-navigation site-navigation--closed site-navigation--nojs">
           <button class="site-navigation__toggle" type="button">
             <span class="visually-hidden">Открыть меню</span>
-            <!-- <svg class="site-list__icon site-list__icon-open" width="20" height="14"><use xlink:href="img/sprite.svg#icon-menu-open"></use></svg> -->
           </button>
           <div class="site-navigation__wrapper">
             <ul class="site-list site-navigation__list">
@@ -34,7 +33,7 @@
               </li>
               <li class="site-list__item site-list__item--search">
                 <a class="site-list__link site-list__link--search" href="#">
-                  <span class="site-list__text">Поиск по сайту</span>
+                  Поиск по сайту
                   <svg class="site-list__icon site-list__icon--search" width="18" height="18"><use xlink:href="img/sprite.svg#icon-search"></use></svg>
                 </a>
               </li>
@@ -79,7 +78,7 @@
                 </div>
                 <div class="catalog__column-price">
                   <p class="catalog__price">1 200 руб.</p>
-                  <button class="catalog__button catalog__button--hair" type="button">
+                  <button class="catalog__button catalog__button--hair js-popup-open" type="button">
                     <span class="visually-hidden">Купить</span>
                     <svg class="catalog__icon" width="21" height="19"><use xlink:href="img/sprite.svg#icon-cart"></use></svg>
                   </button>
@@ -104,7 +103,7 @@
                 </div>
                 <div class="catalog__column-price">
                   <p class="catalog__price">690 руб.</p>
-                  <button class="catalog__button catalog__button--cart" type="button">
+                  <button class="catalog__button catalog__button--cart js-popup-open" type="button">
                     <span class="visually-hidden">Купить</span>
                     <svg class="catalog__icon" width="21" height="19"><use xlink:href="img/sprite.svg#icon-cart"></use></svg>
                   </button>
@@ -129,7 +128,7 @@
                 </div>
                 <div class="catalog__column-price">
                   <p class="catalog__price">1 500 руб.</p>
-                  <button class="catalog__button catalog__button--bigcart" type="button">
+                  <button class="catalog__button catalog__button--bigcart js-popup-open" type="button">
                     <span class="visually-hidden">Купить</span>
                     <svg class="catalog__icon" width="21" height="19"><use xlink:href="img/sprite.svg#icon-cart"></use></svg>
                   </button>
@@ -198,7 +197,7 @@
         </div>
       </footer>
     </div>
-    <div class="modal__overlay modal ">
+    <div class="modal">
       <section class="modal__content">
         <h2 class="modal__title">Добавить в корзину</h2>
         <p class="modal__text">Выберите размер:</p>

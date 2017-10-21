@@ -29,6 +29,24 @@ gulp.task("style", function() {
     .pipe(server.stream());
 });
 
+gulp.task("html", function() {
+  return gulp.src([
+    "*.html"
+  ], {
+    base: "."
+  })
+    .pipe(gulp.dest("build"));
+});
+
+gulp.task("js", function() {
+  return gulp.src([
+    "js/*.js"
+  ], {
+    base: "."
+  })
+    .pipe(gulp.dest("build"));
+});
+
 gulp.task("images", function() {
   return gulp.src("img/**/*.{png,jpg,svg}")
     .pipe(imagemin([
@@ -70,27 +88,26 @@ gulp.task("clean", function () {
   return del("build");
 });
 
-// gulp.task("js", function () {
-//   return gulp.src("js/script.js")
-//     .pipe(uglify())
-//     .pipe(rename("script.min.js"))
-//     .pipe(gulp.dest("build/js"));
-// });
+gulp.task("js", function () {
+  return gulp.src("js/script.js")
+    .pipe(uglify())
+    .pipe(rename("script.min.js"))
+    .pipe(gulp.dest("build/js"));
+});
 
 gulp.task("build", function (done) {
-  run("clean", "copy", "style", done);
+  run("clean", "copy", "style", "js", done);
 });
 
 
 gulp.task("serve", function() {
   server.init({
-    server: "build/",
-    notify: false,
-    open: true,
-    cors: true,
-    ui: false
+    server: "build/"
   });
 
   gulp.watch("less/**/*.less", ["style"]);
-  gulp.watch("*.html", ["html"]);
+  gulp.watch("*.html", ["html"]); //watches for html in root directory and copy them to /build on changes
+  gulp.watch("build/*.html").on("change", server.reload); //watches for html in build directory
+  gulp.watch("js/*.js", ["js"]); //watches for JS in root directory and copy them to /build on changes
+  gulp.watch("build/js/*.js").on("change", server.reload); //watches for JS in build directory
 });
