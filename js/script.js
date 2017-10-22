@@ -18,7 +18,7 @@ var popup = document.querySelector('.modal');
 
   if (button) {
     for (var i=0; i<button.length; i++) {
-      button[i].addEventListener("click", function (e) {
+      button[i].addEventListener('click', function (e) {
         e.preventDefault();
         popup.classList.add('modal--show');
       })
@@ -34,7 +34,7 @@ window.addEventListener('keydown', function (evt) {
 });
 
 function initMap() {
-  var map = new google.maps.Map(document.getElementById("map"), {
+  var map = new google.maps.Map(document.getElementById('map'), {
     zoom: 17,
     center: {lat: 59.936250, lng: 30.321751}
   });
@@ -44,7 +44,7 @@ function initMap() {
   ].join('\n');
 
   var customMarker = {
-    url: "data:image/svg+xml;charset=UTF-8," + encodeURIComponent(svg),
+    url: 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(svg),
     scaledSize: new google.maps.Size(100, 100)
 }
 
