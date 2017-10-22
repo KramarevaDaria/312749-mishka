@@ -6,7 +6,7 @@
 .popular::after {
   content: "";
   position: absolute;
-  bottom: 0px;
+  bottom: 0;
   left: 0;
   width: 320px;
   height: 7px;
@@ -27,7 +27,7 @@
 .popular__ad {
   margin: 0;
   margin-bottom: 20px;
-  color: #63d1bb;
+  color: @green;
   font-weight: bold;
   text-transform: uppercase;
 }
@@ -37,7 +37,7 @@
   margin-bottom: 17px;
   font-size: 15px;
   line-height: 24px;
-  color: #444444;
+  color: @darkgrey;
 }
 
 .popular__list {
@@ -45,25 +45,25 @@
   margin-bottom: 30px;
   font-size: 15px;
   line-height: 20px;
-  color: #444444;
+  color: @darkgrey;
   border-collapse: collapse;
 }
 
 .popular__field {
   padding: 10px 0;
-  border-bottom: 1px solid #ececec;
+  border-bottom: 1px solid @border-grey;
 }
 
 .popular__value {
   padding: 10px 0;
   padding-left: 15px;
-  border-bottom: 1px solid #ececec;
+  border-bottom: 1px solid @border-grey;
 }
 
 .popular__image-wrapper {
   margin: 0;
   margin-bottom: 20px;
-  padding:0;
+  padding: 0;
 }
 
 .popular__price {
@@ -72,7 +72,7 @@
   font-weight: bold;
   line-height: 24px;
   text-align: center;
-  color: #444444;
+  color: @darkgrey;
 }
 
 .popular__button {
@@ -82,13 +82,13 @@
   cursor: pointer;
 
   &:hover {
-    color: #ffffff;
-    background-color: #444444;
+    color: @white;
+    background-color: @darkgrey;
   }
 
   &:focus {
-    color: #ffffff;
-    background-color: #444444;
+    color: @white;
+    background-color: @darkgrey;
   }
 
   &:active {
@@ -188,7 +188,7 @@
 
   .popular__title {
     position: relative;
-    z-index: 100;
+    z-index: 30;
     flex-basis: 870px;
     margin: 0;
     padding: 120px 50px 0 0;

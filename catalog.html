@@ -13,7 +13,6 @@
         <nav class="site-navigation site-navigation--closed site-navigation--nojs">
           <button class="site-navigation__toggle" type="button">
             <span class="visually-hidden">Открыть меню</span>
-            <!-- <svg class="site-list__icon site-list__icon-open" width="20" height="14"><use xlink:href="img/sprite.svg#icon-menu-open"></use></svg> -->
           </button>
           <div class="site-navigation__wrapper">
             <ul class="site-list site-navigation__list">
@@ -22,7 +21,7 @@
                   <picture>
                     <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
                     <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-                    <img src="img/logo-mobile.svg" width="86" height="35" alt="Логотип магазина Мишка">
+                    <img src="img/logo-mobile.svg" alt="Логотип магазина Мишка">
                   </picture>
                 </a>
               </li>
@@ -34,7 +33,7 @@
               </li>
               <li class="site-list__item site-list__item--search">
                 <a class="site-list__link site-list__link--search" href="#">
-                  <span class="site-list__text">Поиск по сайту</span>
+                  Поиск по сайту
                   <svg class="site-list__icon site-list__icon--search" width="18" height="18"><use xlink:href="img/sprite.svg#icon-search"></use></svg>
                 </a>
               </li>
@@ -79,10 +78,10 @@
                 </div>
                 <div class="catalog__column-price">
                   <p class="catalog__price">1 200 руб.</p>
-                  <button class="catalog__button" type="button">
+                  <a class="catalog__button js-popup-open" href="#">
                     <span class="visually-hidden">Купить</span>
                     <svg class="catalog__icon" width="21" height="19"><use xlink:href="img/sprite.svg#icon-cart"></use></svg>
-                  </button>
+                  </a>
                 </div>
               </div>
             </li>
@@ -104,10 +103,10 @@
                 </div>
                 <div class="catalog__column-price">
                   <p class="catalog__price">690 руб.</p>
-                  <button class="catalog__button" type="button">
+                  <a class="catalog__button js-popup-open" href="#">
                     <span class="visually-hidden">Купить</span>
                     <svg class="catalog__icon" width="21" height="19"><use xlink:href="img/sprite.svg#icon-cart"></use></svg>
-                  </button>
+                  </a>
                 </div>
               </div>
             </li>
@@ -129,10 +128,10 @@
                 </div>
                 <div class="catalog__column-price">
                   <p class="catalog__price">1 500 руб.</p>
-                  <button class="catalog__button" type="button">
+                  <a class="catalog__button js-popup-open" href="#">
                     <span class="visually-hidden">Купить</span>
                     <svg class="catalog__icon" width="21" height="19"><use xlink:href="img/sprite.svg#icon-cart"></use></svg>
-                  </button>
+                  </a>
                 </div>
               </div>
             </li>
@@ -142,7 +141,6 @@
           <div class="details__wrapper">
             <h2 class="details__title">Процесс производства</h2>
             <div class="details__video">
-              <!-- <video  class="details__video" preload="metadata" width="260" height="150"></video> -->
               <picture>
                 <source type="image/webp" media="(min-width: 1150px)" srcset="img/video-desktop@1x.webp 1x, img/video-desktop@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 786px)" srcset="img/video-tablet@1x.webp 1x, img/video-tablet@2x.webp 2x">
@@ -198,28 +196,30 @@
         </div>
       </footer>
     </div>
-    <section class="modal">
-      <h2 class="modal__title">Добавить в корзину</h2>
-      <p class="modal__text">Выберите размер:</p>
-      <form class="modal__filter" action="https://echo.htmlacademy.ru" method="get">
-        <label class="modal__label">
-          <input class="modal__item modal__item--s visually-hidden" type="radio" name="size" value="small" checked>
-          <span class="modal__indicator modal__indicator--s"></span>
-          S
-        </label>
-        <label class="modal__label">
-          <input class="modal__item modal__item--m visually-hidden" type="radio" name="size" value="medium">
-          <span class="modal__indicator modal__indicator--m"></span>
-          M
-        </label>
-        <label class="modal__label">
-          <input class="modal__item modal__item--l visually-hidden" type="radio" name="size" value="large">
-          <span class="modal__indicator modal__indicator--l"></span>
-          L
-        </label>
-        <button class="modal__button button" type="button">Добавить</button>
-      </form>
-    </section>
+    <div class="modal">
+      <section class="modal__content">
+        <h2 class="modal__title">Добавить в корзину</h2>
+        <p class="modal__text">Выберите размер:</p>
+        <form class="modal__filter" action="https://echo.htmlacademy.ru" method="get">
+          <label class="modal__label">
+            <input class="modal__item modal__item--s visually-hidden" type="radio" name="size" value="small" checked>
+            <span class="modal__indicator modal__indicator--s"></span>
+            S
+          </label>
+          <label class="modal__label">
+            <input class="modal__item modal__item--m visually-hidden" type="radio" name="size" value="medium">
+            <span class="modal__indicator modal__indicator--m"></span>
+            M
+          </label>
+          <label class="modal__label">
+            <input class="modal__item modal__item--l visually-hidden" type="radio" name="size" value="large">
+            <span class="modal__indicator modal__indicator--l"></span>
+            L
+          </label>
+          <button class="modal__button button" type="button">Добавить</button>
+        </form>
+      </section>
+    </div>
     <script src="js/picturefill.min.js" async></script>
     <script type="text/javascript" src="js/svg4everybody.min.js"></script>
     <script>svg4everybody();</script>

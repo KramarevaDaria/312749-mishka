@@ -6,7 +6,7 @@
 .reviews::after {
   content: "";
   position: absolute;
-  bottom: 0px;
+  bottom: 0;
   left: 0;
   width: 320px;
   height: 7px;
@@ -33,7 +33,7 @@
   padding: 0;
   font-size: 15px;
   line-height: 30px;
-  color: #444444;
+  color: @darkgrey;
 }
 
 .reviews__signature {
@@ -53,7 +53,7 @@
   font-size: 17px;
   font-style: normal;
   line-height: 30px;
-  color: #444444;
+  color: @darkgrey;
 }
 
 .reviews__buttons {
@@ -67,7 +67,7 @@
   height: 52px;
   text-align: center;
   background-color: transparent;
-  border: 1px solid #ececec;
+  border: 1px solid @border-grey;
 
   &:hover {
     opacity: 0.6;

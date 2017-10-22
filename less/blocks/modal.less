@@ -1,4 +1,4 @@
-.modal-overlay {
+.modal {
   position: fixed;
   right: 0;
   left: 0;
@@ -6,10 +6,10 @@
   bottom: 0;
   z-index: 49;
   display: none;
-  background: rgba(0,0,0,.5);
+  background: rgba(0, 0, 0, 0.5);
 }
 
-.modal {
+.modal__content {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -20,9 +20,9 @@
   padding: 0 30px;
   text-align: center;
   box-sizing: border-box;
-  border: 1px solid #c7c7c7;
-  box-shadow: 0px 5px 10px 0px rgba(0, 1, 1, 0.25);
-  background-color: #ffffff;
+  border: 1px solid @medium-grey;
+  box-shadow: 0 5px 10px 0 rgba(0, 1, 1, 0.25);
+  background-color: @white;
 }
 
 
@@ -45,7 +45,7 @@
   margin-bottom: 20px;
   font-size: 15px;
   line-height: 30px;
-  color: #444444;
+  color: @darkgrey;
 }
 
 .modal__filter {
@@ -63,47 +63,41 @@
   font-size: 17px;
   font-weight: bold;
   line-height: 17px;
-  color: #444444;
+  color: @darkgrey;
 
   &:last-child {
     margin-right: 0;
   }
 }
 
-.modal__label input[type="radio"] +
-.modal__indicator {
+.modal__label input[type="radio"] + .modal__indicator {
   position: absolute;
   top: 0;
   left: 0;
   width: 78px;
   height: 52px;
-  border: 2px solid #ececec;
+  border: 2px solid @border-grey;
 }
 
-.modal__label input[type="radio"]:hover +
-.modal__indicator {
-  border-color: #c7c7c7;
+.modal__label input[type="radio"]:hover + .modal__indicator {
+  border-color: @medium-grey;
 }
 
-.modal__label input[type="radio"]:focus +
-.modal__indicator {
-  border-color: #c7c7c7;
+.modal__label input[type="radio"]:focus + .modal__indicator {
+  border-color: @medium-grey;
 }
 
-.modal__label input[type="radio"]:active +
-.modal__indicator {
-  border-color: #62d1ba;
+.modal__label input[type="radio"]:active + .modal__indicator {
+  border-color: @green;
 }
 
-.modal__label input[type="radio"]:checked +
-.modal__indicator {
-  border-color: #62d1ba;
+.modal__label input[type="radio"]:checked + .modal__indicator {
+  border-color: @green;
 }
 
-.modal__label input[type="radio"]:disabled +
-.modal__indicator {
+.modal__label input[type="radio"]:disabled + .modal__indicator {
   opacity: 0.3;
-  border-color: #ececec;
+  border-color: @border-grey;
 }
 
 .modal__button {
@@ -111,17 +105,17 @@
   margin: 50px 0 45px;
   font-size: 17px;
   line-height: 17px;
-  color: #ffffff;
-  background-color: #63d1bb;
+  color: @white;
+  background-color: @green;
   border: none;
   cursor: pointer;
 }
 
 @media (min-width: @tablet-width) {
-  .modal {
+  .modal__content {
     width: 566px;
     padding: 0 105px;
-    border: 1px solid #c7c7c7;
+    border: 1px solid @medium-grey;
   }
 
   .modal__title {
@@ -142,8 +136,7 @@
     width: 112px;
   }
 
-  .modal__label input[type="radio"] +
-  .modal__indicator {
+  .modal__label input[type="radio"] + .modal__indicator {
     width: 108px;
   }
 
